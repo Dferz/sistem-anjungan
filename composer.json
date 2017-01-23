@@ -19,7 +19,9 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "aayaresko/yii2-widget-timer": "*",
-        "stmswitcher/yii2-flipclock": "dev-master"
+        "stmswitcher/yii2-flipclock": "dev-master",
+        "xj/yii2-fullpage-widget": " *",
+        "mrlco/yii2-google-charts": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
