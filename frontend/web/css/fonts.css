@@ -1,0 +1,27 @@
+@font-face {
+    font-family: lato-regular;
+    src: url(../fonts/Lato-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: lato-bold;
+    src: url(../fonts/Lato-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: lato-black;
+    src: url(../fonts/Lato-Black.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: raleway-bold;
+    src: url(../fonts/Raleway-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}

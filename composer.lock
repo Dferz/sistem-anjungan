@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f08e0abea71b3609f00e1c90c38a4e7d",
+    "content-hash": "db522582a673f16a4921ccad297d3445",
     "packages": [
+        {
+            "name": "aayaresko/yii2-widget-timer",
+            "version": "v1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aayaresko/yii2-widget-timer.git",
+                "reference": "b02c3cd28bf287136aa5f640a5a296d7afcf9cfd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aayaresko/yii2-widget-timer/zipball/b02c3cd28bf287136aa5f640a5a296d7afcf9cfd",
+                "reference": "b02c3cd28bf287136aa5f640a5a296d7afcf9cfd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "aayaresko\\timer\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause License"
+            ],
+            "authors": [
+                {
+                    "name": "aayaresko",
+                    "email": "aayaresko@gmail.com"
+                }
+            ],
+            "description": "Yii2 widget that displays controllable timer/stopwatch",
+            "homepage": "https://github.com/aayaresko/yii2-widget-timer",
+            "keywords": [
+                "counter",
+                "extension",
+                "jquery",
+                "plugin",
+                "stopwatch",
+                "timer",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-04-26T12:55:36+00:00"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.7",
@@ -297,6 +344,48 @@
                 "html"
             ],
             "time": "2016-07-16T12:58:58+00:00"
+        },
+        {
+            "name": "stmswitcher/yii2-flipclock",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stmswitcher/yii2-flipclock.git",
+                "reference": "e8c53a6b0be9ebf368e18af92efcbb7c04125a3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stmswitcher/yii2-flipclock/zipball/e8c53a6b0be9ebf368e18af92efcbb7c04125a3d",
+                "reference": "e8c53a6b0be9ebf368e18af92efcbb7c04125a3d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "stmswitcher\\flipclock\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU GPL v2"
+            ],
+            "authors": [
+                {
+                    "name": "Denis Alexandrov",
+                    "email": "stm.switcher@gmail.com",
+                    "homepage": "http://github.com/stmswitcher"
+                }
+            ],
+            "description": "Yii2 FlipClock wrapper",
+            "keywords": [
+                "flipclock",
+                "yii2"
+            ],
+            "time": "2016-01-03 01:31:51"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2963,7 +3052,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "stmswitcher/yii2-flipclock": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

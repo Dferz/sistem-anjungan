@@ -4,13 +4,11 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use frontend\assets\AppAsset;
-use common\widgets\Alert;
+use \stmswitcher\flipclock\FlipClock;
+use frontend\assets\SistemAnjunganAsset;
 
-AppAsset::register($this);
+
+SistemAnjunganAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -24,57 +22,57 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'My Company',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
+    <!-- #### HEADER #### -->
+    <div class="navbar navbar_site">
+        <!-- #### LOGO #### -->
+        <div class="col-md-4 col-sm-4" style="height: inherit;">
+            <div class="header left-header">
+                <?php
+                    echo Html::img('@web/images/LOGO.png', ['alt'=>'logo', 'class' => 'logo', 'style' => 'width:100%;']);
+                ?>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4" style="height: inherit;">
+            <div class="header middle-header">
+                <h1>
+                    Home
+                </h1>
+            </div>
+        </div>
+        <!-- #### CLOCK #### -->
+        <div class="col-md-4 col-sm-4" style="height: inherit;">
+            <div class="header right-header">
+                <?php
+                echo FlipClock::widget([
+                    'options'     => [
+                        'language'  => 'id',
+                        'clockFace' => 'TwentyFourHourClock',
+                        'showSeconds' => 'false'
+                    ]
+                ]);
+                ?>    
+            </div>
+            
+        </div>    
+    </div>
+    <!-- #### END HEADER #### -->
+    
+    <!-- #### CONTENT #### -->
+    <div class="content">
+        <?= $content ?>        
+    </div>
+    <!-- #### END CONTENT #### -->
 
+</div>
+<!-- #### FOOTER #### -->
+<div class="footer">
     <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+        <p class="pull-left">&copy; Informatika UNS <?= date('Y') ?></p>
+        <p class="pull-right">Sistem Anjungan Informasi</p>
     </div>
 </div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
+<!-- #### END FOOTER #### -->
 
 <?php $this->endBody() ?>
 </body>

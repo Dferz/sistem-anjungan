@@ -12,6 +12,7 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'homeUrl' => '/sistem-anjungan',
+    'defaultRoute' => 'home/index',
     'components' => [
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -40,7 +41,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'home/error',
         ],
         /*
         'urlManager' => [
