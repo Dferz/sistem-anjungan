@@ -6,7 +6,7 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
 ?>
 
 <div class="container">
-	<div class="wrap-content">
+	<div class="wrap-content" style="color:#E6E9ED;">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="timeline">

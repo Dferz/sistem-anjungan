@@ -27,14 +27,14 @@ SistemAnjunganAsset::register($this);
     <div class="navbar navbar_site">
         <!-- #### LOGO #### -->
         <div class="col-md-4 col-sm-4" style="height: inherit;">
-            <div class="header left-header">
+            <div class="navbar_box">
                 <?php
-                    echo Html::img('@web/images/LOGO.png', ['alt'=>'logo', 'class' => 'logo', 'style' => 'width:100%;']);
+                    echo Html::img('@web/images/LOGO.png', ['alt'=>'logo', 'class' => 'logo', 'style' => 'max-width:100%;']);
                 ?>
             </div>
         </div>
         <div class="col-md-4 col-sm-4" style="height: inherit;">
-            <div class="header middle-header">
+            <div class="navbar_box">
                 <h1>
                     Home
                 </h1>
@@ -42,16 +42,17 @@ SistemAnjunganAsset::register($this);
         </div>
         <!-- #### CLOCK #### -->
         <div class="col-md-4 col-sm-4" style="height: inherit;">
-            <div class="header right-header">
-                <?php
-                echo FlipClock::widget([
-                    'options'     => [
-                        'language'  => 'id',
-                        'clockFace' => 'TwentyFourHourClock',
-                        'showSeconds' => 'false'
-                    ]
-                ]);
-                ?>    
+            <div class="navbar_box">    
+                <div class="clock">
+                    <div id="Date"></div>
+
+                    <ul>
+                        <li id="hours"> </li>
+                        <li id="point">:</li>
+                        <li id="min"> </li>
+                       
+                    </ul>
+                </div>   
             </div>
             
         </div>    
@@ -59,7 +60,7 @@ SistemAnjunganAsset::register($this);
     <!-- #### END HEADER #### -->
     
     <!-- #### CONTENT #### -->
-    <div class="content">
+    <div class="content" style="clear:both;">
         <?= $content ?>        
     </div>
     <!-- #### END CONTENT #### -->

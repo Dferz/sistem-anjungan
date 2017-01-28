@@ -25,37 +25,51 @@ class HomeController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $title = 'Sistem Anjungan - Home ';
+        return $this->render('index',  array('title' => $title));
     }
 
     public function actionAgenda()
     {
-        return $this->render('index');
+        $title = 'Sistem Anjungan - Agenda ';
+        return $this->render('index', array('title' => $title));
     }
 
     public function actionKehadiranDosen()
     {
-        return $this->render('kehadiran-dosen');
+        $title = 'Sistem Anjungan - Kehadiran Dosen ';
+        return $this->render('kehadiran-dosen',  array('title' => $title));
     }
 
     public function actionPrestasiMahasiswa()
     {
-        return $this->render('prestasi-mahasiswa');
+        $title = 'Sistem Anjungan - Prestasi Mahasiswa ';
+        return $this->render('prestasi-mahasiswa',  array('title' => $title));
     }
 
     public function actionJadwal()
     {
-        return $this->render('jadwal');
+        $title = 'Sistem Anjungan - Jadwal Seminar ';
+        return $this->render('jadwal',  array('title' => $title));
     }
 
     public function actionProfilDosen()
     {
-        return $this->render('index');
+        $title = 'Sistem Anjungan - Profil Dosen ';
+        return $this->render('index', array('title' => $title));
     }
 
     public function actionPenelitianDosen()
     {
-        return $this->render('index');
+        $title = 'Sistem Anjungan - Penelitian Dosen ';
+        
+        return $this->render('penelitian-dosen', array('title' => $title));
+    }
+
+    public function actionAutoPlay()
+    {
+        $this->layout = 'tes';
+        return $this->render('fullpage');
     }
 
    

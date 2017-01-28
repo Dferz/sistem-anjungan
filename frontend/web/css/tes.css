@@ -1,0 +1,11 @@
+body {
+    color:#E6E9ED;
+    background-color: rgb(241, 242, 246);
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}

@@ -2,6 +2,9 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use frontend\assets\AutoTabsAsset;
+
+AutoTabsAsset::register($this);
 $this->title = 'Sistem Anjungan - Jadwal';
 ?>
 
@@ -32,6 +35,96 @@ $this->title = 'Sistem Anjungan - Jadwal';
                     <td>asdadsada</td>
                     <td>asdadsada</td>
                   </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
                 </tbody>
             </table>
         </div>
@@ -47,6 +140,96 @@ $this->title = 'Sistem Anjungan - Jadwal';
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
                   <tr>
                     <td>asdsada</td>
                     <td>asdadsada</td>
@@ -74,6 +257,96 @@ $this->title = 'Sistem Anjungan - Jadwal';
                     <td>asdadsada</td>
                     <td>asdadsada</td>
                   </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
                 </tbody>
             </table>
         </div>
@@ -95,6 +368,96 @@ $this->title = 'Sistem Anjungan - Jadwal';
                     <td>asdadsada</td>
                     <td>asdadsada</td>
                   </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
+                  <tr>
+                    <td>asdsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                    <td>asdadsada</td>
+                  </tr>
                 </tbody>
             </table>
         </div>
@@ -102,6 +465,10 @@ $this->title = 'Sistem Anjungan - Jadwal';
 </div>
 </div>
 
+
 <?php
-  
+$this->registerJsFile(
+    '@web/js/tabs/tab-jadwal.js',
+    ['depends' => [\yii\web\JqueryAsset::className()]]
+);
 ?>

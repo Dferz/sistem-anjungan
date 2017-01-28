@@ -12,28 +12,19 @@ body {
 	position: relative;
 }
 
-.header{
+.navbar_box{
 	/*margin: 15px 5px;*/
 	position: absolute;
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%, -50%);
-  	width: 100%;
+  	width: 80%;
   	text-align: center;
 
 }
 
-.left-header {
-	max-width: 80%;
-	margin: auto;
-}
-
 .jumbotron {
 	margin-bottom: 0;
-}
-
-.content {
-	
 }
 
 .wrap-content {
@@ -66,6 +57,10 @@ body {
 }
 
 /*==== TAMBAHAN ====*/
+dl {
+	min-height: calc(100vh - 221px);
+}
+
 .presence dl {
 	position: relative;
 }

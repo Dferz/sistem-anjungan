@@ -18,10 +18,8 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "aayaresko/yii2-widget-timer": "*",
-        "stmswitcher/yii2-flipclock": "dev-master",
-        "xj/yii2-fullpage-widget": " *",
-        "mrlco/yii2-google-charts": "*"
+        "mrlco/yii2-google-charts": "*",
+        "rmrevin/yii2-fontawesome": "~2.17"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
