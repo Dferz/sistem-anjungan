@@ -1,5 +1,5 @@
 $('.responsive-slider').responsiveSlider({
     autoplay: true,
-    interval: 2000,
+    interval: 3000,
     transitionTime: 300,
   });

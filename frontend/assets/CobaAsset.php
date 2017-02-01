@@ -11,10 +11,17 @@ class CobaAsset extends AssetBundle
     
     public $css=[
         'css/site.min.css',
+        'css/dropdowneffects/dropdown.css',
     ];
     
     public $js=[
         'js/site.min.js',
+        'js/dropdowneffects/modernizr.custom.63321.js',
+        'js/dropdowneffects/jquery.dropdown.js',
+    ];
+
+    public $jsOptions = [
+        'async' => 'async',
     ];
     
     public $img=[

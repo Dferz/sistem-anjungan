@@ -8,18 +8,22 @@ body {
 	margin-bottom: 0;
 	border-radius: 0;
 	padding: 0 10px;
-	height: 90px;
+	min-height: 90px;
 	position: relative;
 }
 
 .navbar_box{
 	/*margin: 15px 5px;*/
-	position: absolute;
+	/*position: absolute;
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%, -50%);
-  	width: 80%;
+  	width: 80%;*/
   	text-align: center;
+  	min-height: 90px;
+  	display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -75,4 +79,25 @@ dl {
     margin-left: -1px;
     content: '';
     background-color: #ccd1d9;
+}
+
+.dropdown-menu {
+	background-color: #80b3ff;
+}
+
+
+/*==== DROPDOWN EFFECTS ====*/
+.cd-dropdown > span:after {
+	border: none;
+}
+
+.cd-dropdown > span {
+	color: inherit;
+	background: inherit;
+	font-size: xx-large;
+	padding: 0;
+}
+
+.cd-dropdown > span, .cd-dropdown ul li {
+	box-shadow: none;
 }

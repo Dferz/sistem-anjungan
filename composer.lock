@@ -4,55 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4924bf0416c05cf144c5123a03afa576",
+    "content-hash": "ae24805243ed2ffb0bc7ace63dbe4fd1",
     "packages": [
-        {
-            "name": "aayaresko/yii2-widget-timer",
-            "version": "v1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aayaresko/yii2-widget-timer.git",
-                "reference": "b02c3cd28bf287136aa5f640a5a296d7afcf9cfd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aayaresko/yii2-widget-timer/zipball/b02c3cd28bf287136aa5f640a5a296d7afcf9cfd",
-                "reference": "b02c3cd28bf287136aa5f640a5a296d7afcf9cfd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "aayaresko\\timer\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD 3-Clause License"
-            ],
-            "authors": [
-                {
-                    "name": "aayaresko",
-                    "email": "aayaresko@gmail.com"
-                }
-            ],
-            "description": "Yii2 widget that displays controllable timer/stopwatch",
-            "homepage": "https://github.com/aayaresko/yii2-widget-timer",
-            "keywords": [
-                "counter",
-                "extension",
-                "jquery",
-                "plugin",
-                "stopwatch",
-                "timer",
-                "widget",
-                "yii2"
-            ],
-            "time": "2016-04-26T12:55:36+00:00"
-        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.7",
@@ -103,51 +56,68 @@
             ]
         },
         {
-            "name": "bower-asset/fullpage.js",
-            "version": "2.6.9",
+            "name": "bower-asset/fullcalendar",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/alvarotrigo/fullPage.js.git",
-                "reference": "a3e4c5bac87ef6d0fd8afa3f64be9883228fd17c"
+                "url": "https://github.com/fullcalendar/fullcalendar.git",
+                "reference": "c9e90782f61b7a6ebd47a6314be1648749a7a7d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alvarotrigo/fullPage.js/zipball/a3e4c5bac87ef6d0fd8afa3f64be9883228fd17c",
-                "reference": "a3e4c5bac87ef6d0fd8afa3f64be9883228fd17c",
+                "url": "https://api.github.com/repos/fullcalendar/fullcalendar/zipball/c9e90782f61b7a6ebd47a6314be1648749a7a7d6",
+                "reference": "c9e90782f61b7a6ebd47a6314be1648749a7a7d6",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery": ">=1.6.0"
+                "bower-asset/jquery": ">=2.0.0",
+                "bower-asset/moment": ">=2.9.0"
             },
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": [
-                    "jquery.fullPage.js",
-                    "jquery.fullPage.css",
-                    "jquery.fullPage.scss",
-                    "vendors/jquery.easings.min.js",
-                    "vendors/jquery.slimscroll.min.js"
+                    "dist/fullcalendar.js",
+                    "dist/fullcalendar.css"
                 ],
                 "bower-asset-ignore": [
+                    "*",
                     "**/.*",
-                    "node_modules",
-                    "bower_components",
-                    "test",
-                    "tests",
-                    "examples"
+                    "!/dist/**",
+                    "!/README.*",
+                    "!/LICENSE.*",
+                    "!/CHANGELOG.*",
+                    "!/CONTRIBUTING.*"
                 ]
             },
             "license": [
                 "MIT"
             ],
-            "description": "Create  beautiful fullscreen scrolling websites",
+            "description": "Full-sized drag & drop event calendar",
             "keywords": [
-                "jquery",
-                "one_page",
-                "scrolling",
-                "single_page",
-                "sliding"
+                "calendar",
+                "event",
+                "full-sized",
+                "jquery-plugin"
             ]
+        },
+        {
+            "name": "bower-asset/highcharts",
+            "version": "v5.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/highcharts/highcharts-dist.git",
+                "reference": "24cf66c34f5dd79f91b5d1867a21bc6ba071ae60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/highcharts/highcharts-dist/zipball/24cf66c34f5dd79f91b5d1867a21bc6ba071ae60",
+                "reference": "24cf66c34f5dd79f91b5d1867a21bc6ba071ae60",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "highcharts.js"
+            }
         },
         {
             "name": "bower-asset/jquery",
@@ -181,39 +151,29 @@
             ]
         },
         {
-            "name": "bower-asset/jquery.easing",
-            "version": "v1.3.1",
+            "name": "bower-asset/jquery-ui",
+            "version": "1.11.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jozefizso/bower-jquery-easing.git",
-                "reference": "7ddc8b25d24c78bbae8d00a3ae43bf3f274ec8b5"
+                "url": "https://github.com/components/jqueryui.git",
+                "reference": "c34f8dbf3ba57b3784b93f26119f436c0e8288e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jozefizso/bower-jquery-easing/zipball/7ddc8b25d24c78bbae8d00a3ae43bf3f274ec8b5",
-                "reference": "7ddc8b25d24c78bbae8d00a3ae43bf3f274ec8b5",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/c34f8dbf3ba57b3784b93f26119f436c0e8288e1",
+                "reference": "c34f8dbf3ba57b3784b93f26119f436c0e8288e1",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery": ">=1.2.1"
+                "bower-asset/jquery": ">=1.6"
             },
             "type": "bower-asset-library",
             "extra": {
-                "bower-asset-main": "js/jquery.easing.js",
-                "bower-asset-ignore": [
-                    "**/.*",
-                    "node_modules",
-                    "bower_components",
-                    "test",
-                    "tests"
-                ]
-            },
-            "description": "jQuery Easing plugin",
-            "keywords": [
-                "easing",
-                "jquery",
-                "jquery plugin"
-            ]
+                "bower-asset-main": [
+                    "jquery-ui.js"
+                ],
+                "bower-asset-ignore": []
+            }
         },
         {
             "name": "bower-asset/jquery.inputmask",
@@ -262,6 +222,48 @@
             ]
         },
         {
+            "name": "bower-asset/moment",
+            "version": "2.17.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moment/moment.git",
+                "reference": "b8a297c1f99b3918f44dd9e3d7bd59379a876ba6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moment/moment/zipball/b8a297c1f99b3918f44dd9e3d7bd59379a876ba6",
+                "reference": "b8a297c1f99b3918f44dd9e3d7bd59379a876ba6",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "moment.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "benchmarks",
+                    "bower_components",
+                    "meteor",
+                    "node_modules",
+                    "scripts",
+                    "tasks",
+                    "test",
+                    "component.json",
+                    "composer.json",
+                    "CONTRIBUTING.md",
+                    "ender.js",
+                    "Gruntfile.js",
+                    "Moment.js.nuspec",
+                    "package.js",
+                    "package.json",
+                    "ISSUE_TEMPLATE.md",
+                    "typing-tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "bower-asset/punycode",
             "version": "v1.3.2",
             "source": {
@@ -290,44 +292,44 @@
             }
         },
         {
-            "name": "bower-asset/slimscroll",
-            "version": "v1.3.8",
+            "name": "bower-asset/slider-pro",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rochal/jQuery-slimScroll.git",
-                "reference": "cf39d364e777ef95574c30c42d3b85cb2bf325d3"
+                "url": "https://github.com/bqworks/slider-pro.git",
+                "reference": "b373526447a0d36110ae0f7ac83d84476a3cc075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rochal/jQuery-slimScroll/zipball/cf39d364e777ef95574c30c42d3b85cb2bf325d3",
-                "reference": "cf39d364e777ef95574c30c42d3b85cb2bf325d3",
+                "url": "https://api.github.com/repos/bqworks/slider-pro/zipball/b373526447a0d36110ae0f7ac83d84476a3cc075",
+                "reference": "b373526447a0d36110ae0f7ac83d84476a3cc075",
                 "shasum": ""
             },
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": [
-                    "jquery.slimscroll.js",
-                    "jquery.slimscroll.min.js"
+                    "dist/css/slider-pro.css",
+                    "dist/js/jquery.sliderPro.js"
                 ],
                 "bower-asset-ignore": [
-                    "**/.*",
-                    "node_modules",
-                    "bower_components",
-                    "test",
-                    "tests"
+                    "docs",
+                    "examples",
+                    "libs",
+                    ".gitignore",
+                    "bower.json",
+                    "Gruntfile.js",
+                    "package.json",
+                    "README.md"
                 ]
             },
-            "description": "slimScroll is a small jQuery plugin that transforms any div into a scrollable area. slimScroll doesn't occupy any visual space as it only appears on a user initiated mouse-over.",
+            "license": [
+                "MIT"
+            ],
+            "description": "Responsive jQuery slider, featuring modular architecture, CSS3 animations, touch swipe, animated layers, retina, lazy loading and much more.",
             "keywords": [
-                "ecosystem:jquery",
                 "jquery-plugin",
-                "scroll",
-                "scrollable",
-                "scrollbar",
-                "scroller",
-                "scrolling",
-                "slimscroll",
-                "ui"
+                "responsive-slider",
+                "slider-pro"
             ]
         },
         {
@@ -425,6 +427,58 @@
             "time": "2016-09-14T20:40:20+00:00"
         },
         {
+            "name": "edofre/yii2-slider-pro",
+            "version": "V1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Edofre/yii2-slider-pro.git",
+                "reference": "3c314eeba64d5acc9a3c24f8ea86d77773aa31dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Edofre/yii2-slider-pro/zipball/3c314eeba64d5acc9a3c24f8ea86d77773aa31dc",
+                "reference": "3c314eeba64d5acc9a3c24f8ea86d77773aa31dc",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/slider-pro": "1.2.2",
+                "php": ">=5.5.0",
+                "yiisoft/yii2": "2.0.10",
+                "yiisoft/yii2-bootstrap": "~2.0.0",
+                "yiisoft/yii2-jui": "2.0.6"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "edofre\\sliderpro\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Edo Freriks",
+                    "email": "edofre@gmail.com"
+                }
+            ],
+            "description": "Yii2 widget for slider-pro",
+            "homepage": "https://github.com/edofre/yii2-slider-pro",
+            "keywords": [
+                "images",
+                "jquery",
+                "slider",
+                "slider-pro"
+            ],
+            "time": "2016-12-30T15:43:05+00:00"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.9.0",
             "source": {
@@ -520,6 +574,153 @@
             "time": "2016-10-24T15:52:54+00:00"
         },
         {
+            "name": "kartik-v/yii2-dropdown-x",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-dropdown-x.git",
+                "reference": "2df6dd7402a0ca49171cb6c8c522c33b0d85af8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-dropdown-x/zipball/2df6dd7402a0ca49171cb6c8c522c33b0d85af8c",
+                "reference": "2df6dd7402a0ca49171cb6c8c522c33b0d85af8c",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-krajee-base": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "kartik\\dropdown\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An extended bootstrap dropdown widget for Yii 2 with submenu drilldown.",
+            "homepage": "https://github.com/kartik-v/yii2-dropdown-x",
+            "keywords": [
+                "Context",
+                "click",
+                "extension",
+                "menu",
+                "mouse",
+                "widget",
+                "yii2"
+            ],
+            "time": "2017-01-03 11:46:16"
+        },
+        {
+            "name": "kartik-v/yii2-krajee-base",
+            "version": "v1.8.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-krajee-base.git",
+                "reference": "8f558809e6093c8f4f4599b7b9fd64b366b22a60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/8f558809e6093c8f4f4599b7b9fd64b366b22a60",
+                "reference": "8f558809e6093c8f4f4599b7b9fd64b366b22a60",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2-bootstrap": "@dev"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\base\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "Base library and foundation components for all Yii2 Krajee extensions.",
+            "homepage": "https://github.com/kartik-v/yii2-krajee-base",
+            "keywords": [
+                "base",
+                "extension",
+                "foundation",
+                "krajee",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-09-04T09:25:29+00:00"
+        },
+        {
+            "name": "miloschuman/yii2-highcharts-widget",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miloschuman/yii2-highcharts.git",
+                "reference": "17e9aace8a5dc20eb6e67a00efa919e3142a32a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miloschuman/yii2-highcharts/zipball/17e9aace8a5dc20eb6e67a00efa919e3142a32a5",
+                "reference": "17e9aace8a5dc20eb6e67a00efa919e3142a32a5",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/highcharts": "5.0.*",
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "miloschuman\\highcharts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Milo Schuman",
+                    "email": "miloschuman@gmail.com"
+                }
+            ],
+            "description": "Highcharts widget for Yii 2 Framework.",
+            "homepage": "https://github.com/miloschuman/yii2-highcharts",
+            "keywords": [
+                "extension",
+                "highcharts",
+                "highmaps",
+                "highstock",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-11-17T17:44:27+00:00"
+        },
+        {
             "name": "mrlco/yii2-google-charts",
             "version": "1.0.1",
             "source": {
@@ -559,6 +760,55 @@
                 "yii2 google charts"
             ],
             "time": "2016-07-10T11:11:37+00:00"
+        },
+        {
+            "name": "philippfrenzel/yii2fullcalendar",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/philippfrenzel/yii2fullcalendar.git",
+                "reference": "4b287f2d5a5ccf6720e66b63c7f29e41f025bb6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/philippfrenzel/yii2fullcalendar/zipball/4b287f2d5a5ccf6720e66b63c7f29e41f025bb6b",
+                "reference": "4b287f2d5a5ccf6720e66b63c7f29e41f025bb6b",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/fullcalendar": "3.*",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-jui": "*"
+            },
+            "require-dev": {
+                "codeception/codeception": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii2fullcalendar\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Philipp Frenzel",
+                    "email": "philipp@frenzel.net",
+                    "homepage": "http://www.frenzel.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Yii2 fullcalendar Widgets",
+            "homepage": "http://www.frenzel.net/",
+            "keywords": [
+                "fullcalendar",
+                "yii2"
+            ],
+            "time": "2016-09-23T10:20:14+00:00"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -613,48 +863,6 @@
             "time": "2017-01-11T14:05:47+00:00"
         },
         {
-            "name": "stmswitcher/yii2-flipclock",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stmswitcher/yii2-flipclock.git",
-                "reference": "e8c53a6b0be9ebf368e18af92efcbb7c04125a3d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stmswitcher/yii2-flipclock/zipball/e8c53a6b0be9ebf368e18af92efcbb7c04125a3d",
-                "reference": "e8c53a6b0be9ebf368e18af92efcbb7c04125a3d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "stmswitcher\\flipclock\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GNU GPL v2"
-            ],
-            "authors": [
-                {
-                    "name": "Denis Alexandrov",
-                    "email": "stm.switcher@gmail.com",
-                    "homepage": "http://github.com/stmswitcher"
-                }
-            ],
-            "description": "Yii2 FlipClock wrapper",
-            "keywords": [
-                "flipclock",
-                "yii2"
-            ],
-            "time": "2016-01-03 01:31:51"
-        },
-        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.5",
             "source": {
@@ -707,119 +915,6 @@
                 "mailer"
             ],
             "time": "2016-12-29T10:02:40+00:00"
-        },
-        {
-            "name": "xj/yii2-easing-widget",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/xjflyttp/yii2-easing-widget.git",
-                "reference": "ea17b3434c0ea4e2889c940a7848d1f0e1f36e2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/xjflyttp/yii2-easing-widget/zipball/ea17b3434c0ea4e2889c940a7848d1f0e1f36e2e",
-                "reference": "ea17b3434c0ea4e2889c940a7848d1f0e1f36e2e",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/jquery.easing": "*",
-                "yiisoft/yii2": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "xj\\js\\easing\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "xjflyttp",
-                    "email": "xjflyttp@gmail.com"
-                }
-            ],
-            "description": "yii2-easing-widget",
-            "time": "2015-05-10T09:47:47+00:00"
-        },
-        {
-            "name": "xj/yii2-fullpage-widget",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/xjflyttp/yii2-fullpage-widget.git",
-                "reference": "d06ab5398d6427fe20d9348a81fb3413028e8590"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/xjflyttp/yii2-fullpage-widget/zipball/d06ab5398d6427fe20d9348a81fb3413028e8590",
-                "reference": "d06ab5398d6427fe20d9348a81fb3413028e8590",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/fullpage.js": "~2.6.0",
-                "xj/yii2-easing-widget": "*",
-                "xj/yii2-slimscroll-widget": "*",
-                "yiisoft/yii2": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "xj\\js\\fullpage\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "xjflyttp",
-                    "email": "xjflyttp@gmail.com"
-                }
-            ],
-            "description": "yii2-fullpage-widget",
-            "time": "2015-05-17T14:22:10+00:00"
-        },
-        {
-            "name": "xj/yii2-slimscroll-widget",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/xjflyttp/yii2-slimscroll-widget.git",
-                "reference": "49c8ad93492141f80aa5b3281756d10ab4776fdd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/xjflyttp/yii2-slimscroll-widget/zipball/49c8ad93492141f80aa5b3281756d10ab4776fdd",
-                "reference": "49c8ad93492141f80aa5b3281756d10ab4776fdd",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/slimscroll": "~1.3.0",
-                "yiisoft/yii2": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "xj\\js\\slimscroll\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "xjflyttp",
-                    "email": "xjflyttp@gmail.com"
-                }
-            ],
-            "description": "yii2-slimscroll-widget",
-            "time": "2015-05-17T14:20:10+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -1014,6 +1109,56 @@
                 "yii2"
             ],
             "time": "2016-12-20T13:26:02+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-jui",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-jui.git",
+                "reference": "843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d",
+                "reference": "843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery-ui": "1.11.*@stable",
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\jui\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com"
+                }
+            ],
+            "description": "The Jquery UI extension for the Yii framework",
+            "keywords": [
+                "jQuery UI",
+                "yii2"
+            ],
+            "time": "2016-07-22T22:26:59+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -1441,16 +1586,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.5.5",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "399c1f9781e222f6eb6cc238796f5200d1b7f108"
+                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/399c1f9781e222f6eb6cc238796f5200d1b7f108",
-                "reference": "399c1f9781e222f6eb6cc238796f5200d1b7f108",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/5a5a9fc8025a08d8919be87d6884d5a92520cefe",
+                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe",
                 "shasum": ""
             },
             "require": {
@@ -1479,7 +1624,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2016-10-31T17:19:45+00:00"
+            "time": "2017-01-26T22:05:40+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -1974,16 +2119,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.6",
+            "version": "5.7.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "caf8141b89691498d91aaac6c82e9cd5f685ae86"
+                "reference": "69f832b87c731d5cacad7f91948778fe98335fdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/caf8141b89691498d91aaac6c82e9cd5f685ae86",
-                "reference": "caf8141b89691498d91aaac6c82e9cd5f685ae86",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/69f832b87c731d5cacad7f91948778fe98335fdd",
+                "reference": "69f832b87c731d5cacad7f91948778fe98335fdd",
                 "shasum": ""
             },
             "require": {
@@ -2052,7 +2197,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-01-22T08:39:59+00:00"
+            "time": "2017-01-28T06:14:33+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2257,16 +2402,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f"
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
                 "shasum": ""
             },
             "require": {
@@ -2317,7 +2462,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2016-11-19T09:18:40+00:00"
+            "time": "2017-01-29T09:50:25+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -3433,7 +3578,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "stmswitcher/yii2-flipclock": 20
+        "miloschuman/yii2-highcharts-widget": 20,
+        "kartik-v/yii2-dropdown-x": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

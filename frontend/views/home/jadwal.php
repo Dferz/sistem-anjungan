@@ -471,4 +471,10 @@ $this->registerJsFile(
     '@web/js/tabs/tab-jadwal.js',
     ['depends' => [\yii\web\JqueryAsset::className()]]
 );
+
+#### Change menu title ####
+$js = <<< JS
+$( '#cd-dropdown option[data-title-id="jadwal seminar"]' ).attr('selected','');
+JS;
+$this->registerJS($js);
 ?>

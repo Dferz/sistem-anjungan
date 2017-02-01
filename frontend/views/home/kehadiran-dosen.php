@@ -117,3 +117,11 @@ $this->title = 'Sistem Anjungan - Kehadiran Dosen';
 		</div>
     </div>
 
+
+<?php 
+#### Change menu title ####
+$js = <<< JS
+$( '#cd-dropdown option[data-title-id="kehadiran dosen"]' ).attr('selected','');
+JS;
+$this->registerJS($js);
+?>

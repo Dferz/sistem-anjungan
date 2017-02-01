@@ -21,11 +21,15 @@ CobaAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div>Header</div>
-<div>
-    <?= $content ?>
+<div class="animsition">
+	<div>Header</div>
+	<div>
+	    <?= $content ?>
+	</div>
+	<div>Footer</div>
 </div>
-<div>Footer</div>
+
+
 <?php $this->endBody() ?>
 </body>
 </html>

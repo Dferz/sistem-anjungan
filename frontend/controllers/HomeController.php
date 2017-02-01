@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function actionAgenda()
     {
         $title = 'Sistem Anjungan - Agenda ';
-        return $this->render('index', array('title' => $title));
+        return $this->render('agenda', array('title' => $title));
     }
 
     public function actionKehadiranDosen()
@@ -56,7 +56,7 @@ class HomeController extends Controller
     public function actionProfilDosen()
     {
         $title = 'Sistem Anjungan - Profil Dosen ';
-        return $this->render('index', array('title' => $title));
+        return $this->render('profil-dosen', array('title' => $title));
     }
 
     public function actionPenelitianDosen()
@@ -68,8 +68,8 @@ class HomeController extends Controller
 
     public function actionAutoPlay()
     {
-        $this->layout = 'tes';
-        return $this->render('fullpage');
+        
+        return $this->render('agenda');
     }
 
    

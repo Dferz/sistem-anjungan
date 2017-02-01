@@ -56,3 +56,10 @@ $this->title = 'Sistem Anjungan - Home';
     </div>
   <!-- Responsive slider - END -->
 
+<?php 
+#### Change menu title ####
+$js = <<< JS
+$( '#cd-dropdown option[data-title-id="home"]' ).attr('selected','');
+JS;
+$this->registerJS($js);
+?>

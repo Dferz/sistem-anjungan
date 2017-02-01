@@ -48,3 +48,11 @@ $this->registerJsFile(
     ['depends' => [\yii\web\JqueryAsset::className()]]
 );
 ?>
+
+<?php 
+#### Change menu title ####
+$js = <<< JS
+$( '#cd-dropdown option[data-title-id="penelitian dosen"]' ).attr('selected','');
+JS;
+$this->registerJS($js);
+?>

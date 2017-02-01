@@ -74,3 +74,10 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
 	
 </div>
 
+<?php 
+#### Change menu title ####
+$js = <<< JS
+$( '#cd-dropdown option[data-title-id="prestasi mahasiswa"]' ).attr('selected','');
+JS;
+$this->registerJS($js);
+?>
