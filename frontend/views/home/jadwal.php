@@ -17,7 +17,7 @@ $this->title = 'Sistem Anjungan - Jadwal';
             <li><a href="#seminar-hasil">Seminar Hasil</a></li>
             <li><a href="#seminar-ta">Seminar TA</a></li>
         </ul>
-        <div id="seminar-kmm">
+        <div id="seminar-kmm" style="overflow: auto;">
             <h3>Seminar KMM</h3>
             <table class="table table-striped">
                 <thead>
@@ -467,10 +467,25 @@ $this->title = 'Sistem Anjungan - Jadwal';
 
 
 <?php
-$this->registerJsFile(
-    '@web/js/tabs/tab-jadwal.js',
-    ['depends' => [\yii\web\JqueryAsset::className()]]
-);
+
+#### Tabs Setting ####
+$js = <<< JS
+var tabs = $('#jadwal-seminar');
+    tabs.responsiveTabs({
+        rotate: false,
+        startCollapsed: 'accordion',
+        collapsible: 'accordion',
+        setHash: true,
+        animation : 'slide',
+        animationQueue: 'true',
+        duration : 300,
+        scrollToAccordion : true,
+        scrollToAccordionOffset: true,
+
+    });
+
+JS;
+$this->registerJS($js);
 
 #### Change menu title ####
 $js = <<< JS

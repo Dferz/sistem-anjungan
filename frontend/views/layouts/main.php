@@ -92,14 +92,15 @@ SistemAnjunganAsset::register($this);
 
 
 
-<?php 
+<?php
+#### Dropdown setting #### 
 $js = <<< JS
 $( '#cd-dropdown' ).dropdown( {
-                    gutter : 5,
-                    stack : false,
-                    delay : 100,
-                    slidingIn : 100
-                } );
+    gutter : 5,
+    stack : false,
+    delay : 100,
+    slidingIn : 100
+} );
 JS;
 $this->registerJS($js);
 ?>

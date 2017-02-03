@@ -2,59 +2,148 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
-use frontend\assets\SliderAsset;
 use rmrevin\yii\fontawesome\FA;
+use edofre\sliderpro\models\Slide;
+use edofre\sliderpro\models\slides\Caption;
+use edofre\sliderpro\models\slides\Image;
+use edofre\sliderpro\models\slides\Layer;
 
-SliderAsset::register($this);
 rmrevin\yii\fontawesome\AssetBundle::register($this);
 $this->title = 'Sistem Anjungan - Home';
 ?>
 
- <!-- Responsive slider - START -->
-    <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
-    <div class="slides" data-group="slides">
-        <ul>
-            <li>
-          <div class="slide-body" data-group="slide">
-            <?php echo Html::img('@web/images/slide-1.jpg'); ?>
-            <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
-              <h2>Responsive slider</h2>
-              <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">With one to one swipe movement!</div>
-            </div>
-            
-          </div>
-            </li>
-            <li>
-          <div class="slide-body" data-group="slide">
-            <?php echo Html::img('@web/images/slide-2.jpg'); ?>
-            <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
-              <h2>Twitter Boostrap</h2>
-              <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Compatible!</div>
-            </div>
-            
-          </div>
-            </li>
-            <li>
-          <div class="slide-body" data-group="slide">
-            <?php echo Html::img('@web/images/slide-3.jpg'); ?>
-            <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
-              <h2>Custom animations</h2>
-              <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">For any caption you use!</div>
-            </div>
-           
-          </div>
-            </li>
-        </ul>
-    </div>
-    <a class="slider-control left" href="#" data-jump="prev"><?php echo FA::icon('arrow-left');?></a>
-    <a class="slider-control right" href="#" data-jump="next"><?php echo FA::icon('arrow-right');?></a>
-    <div class="pages">
-      <a class="page" href="#" data-jump-to="1">1</a>
-      <a class="page" href="#" data-jump-to="2">2</a>
-      <a class="page" href="#" data-jump-to="3">3</a>
-    </div>
-    </div>
-  <!-- Responsive slider - END -->
+<?php
+#### add slider ####
+$slides = [
+
+    new Slide([
+        'items' => [
+            new Image(['src' => 'images/slide-1.jpg']),
+            new Layer([
+                'tag' => 'h3', 
+                'content' => 'Lorem ipsum dolor sit amet', 
+                'htmlOptions' => [
+                    'class' => 'sp-black sp-padding', 
+                    'data-position' => "Left", 
+                    'data-horizontal' => "10%",
+                    'data-vertical' => "-20%", 
+                    'data-show-transition' => "left",  
+                    'data-show-delay' => "700",
+                    'data-hide-transition' => "right",
+                    
+                ]
+            ]),
+            new Layer([
+                'tag' => 'p', 
+                'content' => 'consectetur adipisicing elit', 
+                'htmlOptions' => [
+                    'class' => 'sp-white sp-padding', 
+                    'data-width' => "200",
+                    'data-position' => "left", 
+                    'data-horizontal' => "15%", 
+                    'data-vertical' => "0", 
+                    'data-show-transition' => "right",
+                    'data-show-delay' => "1000",
+                    'data-hide-transition' => "left",
+                    
+                ]
+            ]),
+        ],
+    ]),
+
+    new Slide([
+        'items' => [
+            new Image(['src' => 'images/slide-2.jpg']),
+            new Layer([
+                'tag' => 'h3', 
+                'content' => 'Lorem ipsum dolor sit amet', 
+                'htmlOptions' => [
+                    'class' => 'sp-black sp-padding', 
+                    'data-position' => "center", 
+                    'data-horizontal' => "0",
+                    'data-vertical' => "-20%", 
+                    'data-show-transition' => "left",  
+                    'data-show-delay' => "700",
+                    'data-hide-transition' => "right",
+                    
+                ]
+            ]),
+            new Layer([
+                'tag' => 'p', 
+                'content' => 'consectetur adipisicing elit', 
+                'htmlOptions' => [
+                    'class' => 'sp-white sp-padding', 
+                    'data-width' => "200",
+                    'data-position' => "center", 
+                    'data-horizontal' => "0", 
+                    'data-vertical' => "0", 
+                    'data-show-transition' => "right",
+                    'data-show-delay' => "1000",
+                    'data-hide-transition' => "left",
+                    
+                ]
+            ]),
+        ],
+    ]),
+
+    new Slide([
+        'items' => [
+            new Image(['src' => 'images/slide-3.jpg']),
+            new Layer([
+                'tag' => 'h3', 
+                'content' => 'Lorem ipsum dolor sit amet', 
+                'htmlOptions' => [
+                    'class' => 'sp-black sp-padding', 
+                    'data-position' => "right", 
+                    'data-horizontal' => "10%",
+                    'data-vertical' => "-20%", 
+                    'data-show-transition' => "left",  
+                    'data-show-delay' => "700",
+                    'data-hide-transition' => "right",
+                    
+                ]
+            ]),
+            new Layer([
+                'tag' => 'p', 
+                'content' => 'consectetur adipisicing elit', 
+                'htmlOptions' => [
+                    'class' => 'sp-white sp-padding', 
+                    'data-width' => "200",
+                    'data-position' => "right", 
+                    'data-horizontal' => "15%", 
+                    'data-vertical' => "0", 
+                    'data-show-transition' => "right",
+                    'data-show-delay' => "1000",
+                    'data-hide-transition' => "left",
+                    
+                ]
+            ]),
+        ],
+    ]),
+
+];
+?>
+
+
+<?= 
+  #### Slider Setting ####
+  \edofre\sliderpro\SliderPro::widget([
+    'id'            => 'slider-home',
+    'slides'        => $slides,
+    'sliderOptions' => [
+        'width'  => 'inherit',
+        'height' => 500,
+        'arrows' => true,
+        'autoplayDelay' => 5000,
+
+        'init'   => new \yii\web\JsExpression("
+            function() {
+                console.log('slider is initialized');
+            }
+        "),
+    ],
+  ]);
+?>
 
 <?php 
 #### Change menu title ####

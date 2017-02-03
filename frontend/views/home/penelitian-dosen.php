@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 use frontend\assets\AutoTabsAsset;
-use mrlco\googlecharts\GoogleCharts;
+use miloschuman\highcharts\Highcharts;
 
 AutoTabsAsset::register($this);
 $this->title = $title;
@@ -18,22 +18,51 @@ $this->title = $title;
         </ul>
         <div id="grafik-penelitian">
             <h3>Grafik</h3>
-            <?php 
-              // PieChart
-echo GoogleCharts::widget([
-    'visualization' => 'PieChart',
-    'containerId' => 'chart-container',
-    'data' => [
-        ['Task', 'Hours per Day'],
-        ['Work', 11],
-        ['Eat', 2],
-        ['Commute', 2],
-        ['Watch TV', 2],
-        ['Sleep', 7]
-    ],
-    'options' => ['title' => 'My Daily Activity']
-]);
-            ?>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <?php
+                        $total = 200;
+                        $unassign = 60;
+                        echo Highcharts::widget([
+                           'scripts' => [
+                                'highcharts-3d',
+                                'modules/exporting',
+                                'themes/grid-light',
+                            ],
+                            'options' => [
+                                'credits' => ['enabled' => false],
+                                'chart' => ['type' => 'pie',
+                                    'options3d' => ['enabled' => true,
+                                        'alpha' => 55, //adjust for tilt
+                                        'beta' => 0, // adjust for turn
+                                    ]
+                                ],
+                                'plotOptions' => [ // it is important here is code for change depth and use pie as donut
+                                    'pie' => [
+                                        'allowPointSelect' => true,
+                                        'cursor' => 'pointer',
+                                        'innerSize' => 100,
+                                        'depth' => 45
+                                    ]
+                                ],
+                                'title' => ['text' => 'Dealer report'],
+                                'series' => [[// mind the [[ instead of [
+                                    'type' => 'pie',
+                                    'name' => 'customer',
+                                    'data' => [
+                                        ['assign', $total - $unassign],
+                                        ['unassign', $unassign],
+                                    ],
+                                    ]], //mind the ]] instead of ] 
+                            ]
+                        ]);
+
+                    ?>    
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    
+                </div>    
+            </div>
         </div>
         <div id="data-penelitian">
            <h3>data</h3>
@@ -43,10 +72,24 @@ echo GoogleCharts::widget([
 </div>
 
 <?php
-$this->registerJsFile(
-    '@web/js/tabs/tab-penelitian.js',
-    ['depends' => [\yii\web\JqueryAsset::className()]]
-);
+#### Tabs Setting ####
+$js = <<< JS
+var tabs = $('#penelitian-dosen');
+    tabs.responsiveTabs({
+        rotate: false,
+        startCollapsed: 'accordion',
+        collapsible: 'accordion',
+        setHash: true,
+        animation : 'slide',
+        animationQueue: 'true',
+        duration : 300,
+        scrollToAccordion : true,
+        scrollToAccordionOffset: true,
+
+    });
+
+JS;
+$this->registerJS($js);
 ?>
 
 <?php 

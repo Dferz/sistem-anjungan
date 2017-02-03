@@ -69,7 +69,7 @@ class HomeController extends Controller
     public function actionAutoPlay()
     {
         
-        return $this->render('agenda');
+        return $this->render('fullpage');
     }
 
    

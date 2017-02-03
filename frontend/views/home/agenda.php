@@ -28,13 +28,15 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
       <?= yii2fullcalendar\yii2fullcalendar::widget([
             'options' => [
                 'lang' => 'id',
-                'header'=>[
+
+                    //... more options to be defined here!
+            ],
+            'header'=>[
                         'left'=>'prev,next today',
                         'center'=> 'title',
-                        'right'=> 'month,agendaWeek,agendaDay'
-                ],
-                    //... more options to be defined here!
-                ],
+                        'right'=> 'month,listWeek,listDay'
+            ],
+            'theme' => true,
             'events'=> $events,
           ]);
         

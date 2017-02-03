@@ -39,3 +39,9 @@
 	background: #e66b20;
 	color: #fff;
 }
+
+/*#### Edited ####*/
+.cd-active.cd-dropdown ul li span:hover {
+	background: #E6E9ED;
+	color: #80b3ff;
+}
