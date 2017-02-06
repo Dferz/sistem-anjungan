@@ -23,7 +23,9 @@
         "edofre/yii2-slider-pro": "V1.1.5",
         "miloschuman/yii2-highcharts-widget": "dev-master",
         "kartik-v/yii2-dropdown-x": "dev-master",
-        "philippfrenzel/yii2fullcalendar": "*"
+        "philippfrenzel/yii2fullcalendar": "*",
+        "kartik-v/yii2-grid": "@dev",
+        "kartik-v/yii2-icons": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

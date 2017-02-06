@@ -18,6 +18,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
+
         'request' => [
             'csrfParam' => '_csrf-frontend',
             'baseUrl' => '/sistem-anjungan'
@@ -51,6 +52,11 @@ return [
             ],
         ],
         */
+    ],
+    'modules' => [
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ]
     ],
     'params' => $params,
 ];

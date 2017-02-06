@@ -23,39 +23,7 @@ $this->title = 'Sistem Anjungan - Kehadiran Dosen';
 							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
 						</ul>
 					</div>
-					<div class="presence-box clearfix">
-						<ul dir="rtl">
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
 					
-					<div class="presence-box clearfix">
-						<ul>
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
-					<div class="presence-box clearfix">
-						<ul dir="rtl">
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
-					
-					<div class="presence-box clearfix">
-						<ul>
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
-					<div class="presence-box clearfix">
-						<ul dir="rtl">
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
-					
-					<div class="presence-box clearfix">
-						<ul>
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6">
 					<div style="max-width: 80px; margin:auto; margin-bottom: 30px;">
@@ -72,46 +40,7 @@ $this->title = 'Sistem Anjungan - Kehadiran Dosen';
 							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
 						</ul>
 					</div>
-					<div class="presence-box clearfix">
-						<ul>
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
-					<div class="presence-box clearfix">
-						<ul dir="rtl">
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>	
-					<div class="presence-box clearfix">
-						<ul>
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
-					<div class="presence-box clearfix">
-						<ul dir="rtl">
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>	
-					<div class="presence-box clearfix">
-						<ul>
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
-					<div class="presence-box clearfix">
-						<ul dir="rtl">
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>	
-					<div class="presence-box clearfix">
-						<ul>
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>
-					<div class="presence-box clearfix">
-						<ul dir="rtl">
-							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
-						</ul>
-					</div>			
+							
 				</div>
 			</dl>
 		</div>

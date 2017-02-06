@@ -20,10 +20,16 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
 		                  			<?php echo Html::img('@web/images/slider1.jpg', ['alt'=>'logo', 'class' => 'logo events-object img-rounded', 'style' => 'width:100%; width:64px; height:64px;']); ?>
 		                		</div>
 		                		<div class="events-body">
-		                  			<h4 class="events-heading">Bootstrap</h4>
-		                  			<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+		                  			<h4 class="events-heading">Datamining Gemastik 9</h4>
+		                  			<ol>
+		                  				<li>Donny</li>
+		                  				<li>Donna</li>
+		                  				<li>Donne</li>
+		                  			</ol>
+		                  			<p>Mahasiswa A, B, C telah memenangkan lomba data mining dengan meraih juara 1 pada acara gemastik yang diselenggarakan oleh UI</p>
 		                		</div>
 		              		</div>
+
             			</dd>
             			<dd class="pos-left clearfix">
               				<div class="circ"></div>
@@ -33,9 +39,14 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
 				                  <?php echo Html::img('@web/images/slider1.jpg', ['alt'=>'logo', 'class' => 'logo events-object img-rounded', 'style' => 'width:100%; width:64px; height:64px;']); ?>
 				                </div>
 				                <div class="events-body">
-				                  <h4 class="events-heading">Bootflat</h4>
-				                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
-				                </div>
+		                  			<h4 class="events-heading">Datamining Gemastik 9</h4>
+		                  			<ol>
+		                  				<li>Donny</li>
+		                  				<li>Donna</li>
+		                  				<li>Donne</li>
+		                  			</ol>
+		                  			<p>Mahasiswa A, B, C telah memenangkan lomba data mining dengan meraih juara 1 pada acara gemastik yang diselenggarakan oleh UI</p>
+		                		</div>
               				</div>
             			</dd>
             			<dt>Mar 2014</dt>
@@ -47,9 +58,14 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
 				                  <?php echo Html::img('@web/images/slider1.jpg', ['alt'=>'logo', 'class' => 'logo events-object img-rounded', 'style' => 'width:100%; width:64px; height:64px;']); ?>
 				                </div>
 				                <div class="events-body">
-				                  <h4 class="events-heading">Flat UI</h4>
-				                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
-				                </div>
+		                  			<h4 class="events-heading">Datamining Gemastik 9</h4>
+		                  			<ol>
+		                  				<li>Donny</li>
+		                  				<li>Donna</li>
+		                  				<li>Donne</li>
+		                  			</ol>
+		                  			<p>Mahasiswa A, B, C telah memenangkan lomba data mining dengan meraih juara 1 pada acara gemastik yang diselenggarakan oleh UI</p>
+		                		</div>
               				</div>
             			</dd>
             			<dd class="pos-left clearfix">
@@ -60,9 +76,14 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
 				                  <?php echo Html::img('@web/images/slider1.jpg', ['alt'=>'logo', 'class' => 'logo events-object img-rounded', 'style' => 'width:100%; width:64px; height:64px;']); ?>
 				                </div>
 				                <div class="events-body">
-				                  <h4 class="events-heading">UI design</h4>
-				                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
-				                </div>
+		                  			<h4 class="events-heading">Datamining Gemastik 9</h4>
+		                  			<ol>
+		                  				<li>Donny</li>
+		                  				<li>Donna</li>
+		                  				<li>Donne</li>
+		                  			</ol>
+		                  			<p>Mahasiswa A, B, C telah memenangkan lomba data mining dengan meraih juara 1 pada acara gemastik yang diselenggarakan oleh UI</p>
+		                		</div>
               				</div>
             			</dd>
 

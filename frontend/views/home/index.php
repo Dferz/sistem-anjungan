@@ -132,7 +132,7 @@ $slides = [
     'slides'        => $slides,
     'sliderOptions' => [
         'width'  => 'inherit',
-        'height' => 500,
+        'height' => 'calc(100vh - 101px)',
         'arrows' => true,
         'autoplayDelay' => 5000,
 

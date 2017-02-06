@@ -4,141 +4,98 @@
 use yii\helpers\Html;
 $this->title = 'Sistem Anjungan - Home';
 
-use mrlco\googlecharts\GoogleCharts;
-
+use rmrevin\yii\fontawesome\FA;
+rmrevin\yii\fontawesome\AssetBundle::register($this);
 ?>
 
+<div style="color: blue;">
+    
 
 <?php
 
-use edofre\sliderpro\models\Slide;
-use edofre\sliderpro\models\slides\Caption;
-use edofre\sliderpro\models\slides\Image;
-use edofre\sliderpro\models\slides\Layer;
+use kartik\grid\GridView;
 
-$slides = [
+// echo GridView::widget([
+//     'dataProvider'=> $dataProvider,
+//     // 'columns' => [
+        
 
-    new Slide([
-        'items' => [
-            new Image(['src' => '../images/slide-1.jpg']),
-            new Layer([
-                'tag' => 'h3', 
-                'content' => 'Lorem ipsum dolor sit amet', 
-                'htmlOptions' => [
-                    'class' => 'sp-black sp-padding', 
-                    'data-position' => "Left", 
-                    'data-horizontal' => "10%",
-                    'data-vertical' => "-20%", 
-                    'data-show-transition' => "left",  
-                    'data-show-delay' => "1500",
-                    'data-hide-transition' => "right",
-                    
-                ]
-            ]),
-            new Layer([
-                'tag' => 'p', 
-                'content' => 'consectetur adipisicing elit', 
-                'htmlOptions' => [
-                    'class' => 'sp-white sp-padding', 
-                    'data-width' => "200",
-                    'data-position' => "left", 
-                    'data-horizontal' => "15%", 
-                    'data-vertical' => "0", 
-                    'data-show-transition' => "right",
-                    'data-show-delay' => "1800",
-                    'data-hide-transition' => "left",
-                    
-                ]
-            ]),
+//     //     // 'tanggal',
+//     //     // 'nama',
+//     //     // 'nim',
+//     //     // 'penguji',
+//     //     // 'jam_mulai',
+//     //     // 'jam_selesai',
+//     //     // 'tempat',
+//     // ],
+//     // 'responsive'=>true,
+//     // 'hover'=>true
+// ]);
+echo Yii::$app->formatter->asDate('now', 'php:Y-m-d');
+echo GridView::widget([
+    'dataProvider' => $dataProvider,
+    'columns' => [
+        ['class' => 'kartik\grid\SerialColumn'],
+        [
+            'attribute' => 'tanggal',
+            'contentOptions' => ['class' => 'text-center'],
+            'headerOptions' => ['class' => 'text-center'],
+            'format' => ['date', 'php:d-m-Y']
+
+
         ],
-    ]),
-
-    new Slide([
-        'items' => [
-            new Image(['src' => '../images/slide-2.jpg']),
-            new Layer([
-                'tag' => 'h3', 
-                'content' => 'Lorem ipsum dolor sit amet', 
-                'htmlOptions' => [
-                    'class' => 'sp-black sp-padding', 
-                    'data-position' => "center", 
-                    'data-horizontal' => "10%",
-                    'data-vertical' => "-20%", 
-                    'data-show-transition' => "left",  
-                    'data-show-delay' => "1500",
-                    'data-hide-transition' => "right",
-                    
-                ]
-            ]),
-            new Layer([
-                'tag' => 'p', 
-                'content' => 'consectetur adipisicing elit', 
-                'htmlOptions' => [
-                    'class' => 'sp-white sp-padding', 
-                    'data-width' => "200",
-                    'data-position' => "center", 
-                    'data-horizontal' => "15%", 
-                    'data-vertical' => "0", 
-                    'data-show-transition' => "right",
-                    'data-show-delay' => "1800",
-                    'data-hide-transition' => "left",
-                    
-                ]
-            ]),
+        [
+            'header' => '<a href=# >Nama</a>',
+            'attribute' => 'nama',
+            'contentOptions' => ['class' => 'text-justify'],
+            'headerOptions' => ['class' => 'text-center'],
+            'enableSorting' => true
         ],
-    ]),
-
-    new Slide([
-        'items' => [
-            new Image(['src' => '../images/slide-3.jpg']),
-            new Layer([
-                'tag' => 'h3', 
-                'content' => 'Lorem ipsum dolor sit amet', 
-                'htmlOptions' => [
-                    'class' => 'sp-black sp-padding', 
-                    'data-position' => "right", 
-                    'data-horizontal' => "10%",
-                    'data-vertical' => "-20%", 
-                    'data-show-transition' => "left",  
-                    'data-show-delay' => "1500",
-                    'data-hide-transition' => "right",
-                    
-                ]
-            ]),
-            new Layer([
-                'tag' => 'p', 
-                'content' => 'consectetur adipisicing elit', 
-                'htmlOptions' => [
-                    'class' => 'sp-white sp-padding', 
-                    'data-width' => "200",
-                    'data-position' => "right", 
-                    'data-horizontal' => "15%", 
-                    'data-vertical' => "0", 
-                    'data-show-transition' => "right",
-                    'data-show-delay' => "1800",
-                    'data-hide-transition' => "left",
-                    
-                ]
-            ]),
+        [
+            'attribute' => 'nim',
+            'contentOptions' => ['class' => 'text-center'],
+            'headerOptions' => ['class' => 'text-center']
         ],
-    ]),
-
-];
-?>
-
-<?= \edofre\sliderpro\SliderPro::widget([
-    'id'            => 'my-slider',
-    'slides'        => $slides,
-    'sliderOptions' => [
-        'width'  => 960,
-        'height' => 500,
-        'arrows' => true,
-        'autoplayDelay' => 5000,
-        'init'   => new \yii\web\JsExpression("
-            function() {
-                console.log('slider is initialized');
+        [
+            'attribute' => 'penguji',
+            'contentOptions' => ['class' => 'text-justify'],
+            'headerOptions' => ['class' => 'text-center']
+        ],
+        [
+            'attribute' => 'jam_mulai',
+            'contentOptions' => ['class' => 'text-center'],
+            'headerOptions' => ['class' => 'text-center']
+        ],
+        [
+            'attribute' => 'jam_selesai',
+            'contentOptions' => ['class' => 'text-center'],
+            'headerOptions' => ['class' => 'text-center']
+        ],
+        [
+            'attribute' => 'tempat',
+            'contentOptions' => ['class' => 'text-center'],
+            'headerOptions' => ['class' => 'text-center']
+        ],
+    ],
+    'rowOptions'=>function($model){
+            if($model->tanggal < Yii::$app->formatter->asDate('now', 'php:Y-m-d')){
+                return ['class' => 'danger'];
+            } else {
+                return ['class' => 'success'];
             }
-        "),
+    },
+    'pjax' => true,
+    'bordered' => true,
+    'striped' => true,
+    'condensed' => true,
+    'responsive' => true,
+    'hover' => true,
+    'panel' => [
+        'type' => GridView::TYPE_PRIMARY,
+        'heading' => '<i class="fa fa-th-list"></i>',
     ],
 ]);
+
 ?>
+
+</div>

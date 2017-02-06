@@ -7,10 +7,10 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\data\ActiveDataProvider;
+use frontend\models\Jadwal;
 
-/**
- * Site controller
- */
+
 class HomeController extends Controller
 {
 
@@ -50,7 +50,22 @@ class HomeController extends Controller
     public function actionJadwal()
     {
         $title = 'Sistem Anjungan - Jadwal Seminar ';
-        return $this->render('jadwal',  array('title' => $title));
+
+        // $query = TbBlog::find();
+        // $dataProvider = new ActiveDataProvider([
+        //     'query' => $query,
+        //     'pagination' => [
+        //         'pageSize' => 10
+        //     ],
+        //     'sort' => [
+        //         'defaultOrder' => [
+        //             'created_at' => SORT_DESC,
+        //             'title' => SORT_ASC, 
+        //         ]
+        //     ],
+        // ]);
+
+        return $this->render('jadwal',  ['title' => $title]);
     }
 
     public function actionProfilDosen()
@@ -68,8 +83,22 @@ class HomeController extends Controller
 
     public function actionAutoPlay()
     {
+
+        $query = Jadwal::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'tanggal' => SORT_DESC,
+                ]
+            ],
+        ]);
         
-        return $this->render('fullpage');
+        return $this->render('fullpage', ['dataProvider' => $dataProvider]);
     }
 
    

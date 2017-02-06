@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use frontend\assets\AutoTabsAsset;
 
 AutoTabsAsset::register($this);
-$this->title = 'Sistem Anjungan - Jadwal';
+$this->title = $title;
 ?>
 
 <div class="container">
@@ -19,447 +19,252 @@ $this->title = 'Sistem Anjungan - Jadwal';
         </ul>
         <div id="seminar-kmm" style="overflow: auto;">
             <h3>Seminar KMM</h3>
-            <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>League</th>
-                    <th>Country</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Tanggal</th>
+                        <th>Nama</th>
+                        <th>Nim</th>
+                        <th>Penguji</th>
+                        <th>Jam Mulai</th>
+                        <th>Jam Selesai</th>
+                        <th>Tempat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr class="success">
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr class="danger">
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      
+                    </tbody>
+                </table>  
+            </div>
+            
         </div>
         <div id="seminar-proposal">
            <h3>Seminar Proposal</h3>
-            <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>League</th>
-                    <th>Country</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Tanggal</th>
+                        <th>Nama</th>
+                        <th>Nim</th>
+                        <th>Penguji</th>
+                        <th>Jam Mulai</th>
+                        <th>Jam Selesai</th>
+                        <th>Tempat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr class="success">
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr class="danger">
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      
+                    </tbody>
+                </table>  
+            </div>
         </div>
         <div id="seminar-hasil">
             <h3>Seminar Hasil</h3>
-            <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>League</th>
-                    <th>Country</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Tanggal</th>
+                        <th>Nama</th>
+                        <th>Nim</th>
+                        <th>Penguji</th>
+                        <th>Jam Mulai</th>
+                        <th>Jam Selesai</th>
+                        <th>Tempat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr class="success">
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr class="danger">
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      
+                    </tbody>
+                </table>  
+            </div>
         </div>
         <div id="seminar-ta">
             <h3>Seminar TA</h3>
-            <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>League</th>
-                    <th>Country</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                  <tr>
-                    <td>asdsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                    <td>asdadsada</td>
-                  </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Tanggal</th>
+                        <th>Nama</th>
+                        <th>Nim</th>
+                        <th>Penguji</th>
+                        <th>Jam Mulai</th>
+                        <th>Jam Selesai</th>
+                        <th>Tempat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr class="success">
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr class="danger">
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2016-12-20</td>
+                        <td>DONNY FERNANDO</td>
+                        <td>M0513022</td>
+                        <td>HARYONO SETIADI, ST., M.Eng</td>
+                        <td>09:00</td>
+                        <td>11:00</td>
+                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
+                      </tr>
+                      
+                    </tbody>
+                </table>  
+            </div>
         </div>
     </div>
 </div>
