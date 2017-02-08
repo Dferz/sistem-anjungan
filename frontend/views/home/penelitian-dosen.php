@@ -4,6 +4,9 @@
 use yii\helpers\Html;
 use frontend\assets\AutoTabsAsset;
 use miloschuman\highcharts\Highcharts;
+use miloschuman\highcharts\SeriesDataHelper;
+use yii\web\JsExpression;
+use kartik\grid\GridView;
 
 AutoTabsAsset::register($this);
 $this->title = $title;
@@ -19,10 +22,9 @@ $this->title = $title;
         <div id="grafik-penelitian">
             <h3>Grafik</h3>
             <div class="row">
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6">
                     <?php
-                        $total = 200;
-                        $unassign = 60;
+                        
                         echo Highcharts::widget([
                            'scripts' => [
                                 'highcharts-3d',
@@ -33,11 +35,14 @@ $this->title = $title;
                                 'credits' => ['enabled' => false],
                                 'chart' => ['type' => 'pie',
                                     'options3d' => ['enabled' => true,
-                                        'alpha' => 55, //adjust for tilt
-                                        'beta' => 0, // adjust for turn
+                                        'alpha' => 55,
+                                        'beta' => 0, 
                                     ]
                                 ],
-                                'plotOptions' => [ // it is important here is code for change depth and use pie as donut
+                                'tooltip' => [
+                                    'pointFormat' => '{series.name}: <b>{point.y}</b> ({point.percentage:.1f}%)'
+                                ],
+                                'plotOptions' => [
                                     'pie' => [
                                         'allowPointSelect' => true,
                                         'cursor' => 'pointer',
@@ -45,27 +50,105 @@ $this->title = $title;
                                         'depth' => 45
                                     ]
                                 ],
-                                'title' => ['text' => 'Dealer report'],
-                                'series' => [[// mind the [[ instead of [
+                                'title' => ['text' => 'Penelitian Dosen'],
+                                'series' => [[
                                     'type' => 'pie',
-                                    'name' => 'customer',
-                                    'data' => [
-                                        ['assign', $total - $unassign],
-                                        ['unassign', $unassign],
+                                    'name' => 'Jumlah Penelitian',
+                                    'data' => new SeriesDataHelper($dataProvider2, ['nama', 'jumlah:int']),
+                                    // 'data' => [
+                                    //     ['asd', 1],
+                                    //     ['das', 2],
+                                    // ],
+                                    'showInLegend' => true,
+                                    'dataLabels' => [
+                                        'enabled' => true,
                                     ],
-                                    ]], //mind the ]] instead of ] 
+                                ]], 
                             ]
                         ]);
 
                     ?>    
                 </div>
-                <div class="col-md-6 col-sm-6">
-                    
+                <div class="col-md-6">
+                    <?php
+                    echo GridView::widget([
+                        'dataProvider' => $dataProvider2,
+                        'columns' => [
+                            ['class' => 'kartik\grid\SerialColumn'],
+                            [
+                                'header' => '<a href=# >Nama</a>',
+                                'attribute' => 'nama',
+                                'contentOptions' => ['class' => 'text-justify'],
+                                'headerOptions' => ['class' => 'text-center kv-align-middle'],
+                            ],
+                            [
+                                'attribute' => 'jumlah',
+                                'contentOptions' => ['class' => 'text-center'],
+                                'headerOptions' => ['class' => 'text-center kv-align-middle']
+                            ],
+
+                        ],
+                        'pjax' => true,
+                        'bordered' => true,
+                        'striped' => true,
+                        'condensed' => true,
+                        'responsive' => true,
+                        'hover' => true,
+                        'panel' => [
+                            'type' => GridView::TYPE_DEFAULT,
+                            'before' => '<h3> Data Penelitian </h3>'
+                        ],
+                    ]);
+                ?>
                 </div>    
             </div>
         </div>
         <div id="data-penelitian">
-           <h3>data</h3>
+           <?php
+                echo GridView::widget([
+                    'dataProvider' => $dataProvider,
+                    'columns' => [
+                        ['class' => 'kartik\grid\SerialColumn'],
+                        [
+                            'header' => '<a href=# >Nama</a>',
+                            'attribute' => 'nama',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle'],
+                        ],
+                        [
+                            'attribute' => 'nip',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+                        [
+                            'attribute' => 'judul_penelitian',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+                        [
+                            'attribute' => 'sumber',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+                        [
+                            'attribute' => 'waktu',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+
+                    ],
+                    'pjax' => true,
+                    'bordered' => true,
+                    'striped' => true,
+                    'condensed' => true,
+                    'responsive' => true,
+                    'hover' => true,
+                    'panel' => [
+                        'type' => GridView::TYPE_DEFAULT,
+                        'before' => '<h3> Detail Penelitian </h3>'
+                    ],
+                ]);
+            ?>
         </div>
     </div>
 </div>

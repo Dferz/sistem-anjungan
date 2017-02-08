@@ -31,7 +31,6 @@ use kartik\grid\GridView;
 //     // 'responsive'=>true,
 //     // 'hover'=>true
 // ]);
-echo Yii::$app->formatter->asDate('now', 'php:Y-m-d');
 echo GridView::widget([
     'dataProvider' => $dataProvider,
     'columns' => [
@@ -49,7 +48,7 @@ echo GridView::widget([
             'attribute' => 'nama',
             'contentOptions' => ['class' => 'text-justify'],
             'headerOptions' => ['class' => 'text-center'],
-            'enableSorting' => true
+            'label' => 'tetel'
         ],
         [
             'attribute' => 'nim',
@@ -91,8 +90,8 @@ echo GridView::widget([
     'responsive' => true,
     'hover' => true,
     'panel' => [
-        'type' => GridView::TYPE_PRIMARY,
-        'heading' => '<i class="fa fa-th-list"></i>',
+        'type' => GridView::TYPE_DEFAULT,
+        'heading' => 'Seminar KMM',
     ],
 ]);
 

@@ -81,10 +81,9 @@ dl {
     background-color: #ccd1d9;
 }
 
-.dropdown-menu {
-	background-color: #80b3ff;
+h1, h2, h3 {
+	margin-top: 15px;
 }
-
 
 /*==== DROPDOWN EFFECTS ====*/
 .cd-dropdown > span:after {

@@ -8,7 +8,9 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\data\ActiveDataProvider;
+use yii\data\ArrayDataProvider;
 use frontend\models\Jadwal;
+use frontend\models\Penelitian;
 
 
 class HomeController extends Controller
@@ -51,21 +53,21 @@ class HomeController extends Controller
     {
         $title = 'Sistem Anjungan - Jadwal Seminar ';
 
-        // $query = TbBlog::find();
-        // $dataProvider = new ActiveDataProvider([
-        //     'query' => $query,
-        //     'pagination' => [
-        //         'pageSize' => 10
-        //     ],
-        //     'sort' => [
-        //         'defaultOrder' => [
-        //             'created_at' => SORT_DESC,
-        //             'title' => SORT_ASC, 
-        //         ]
-        //     ],
-        // ]);
+        $query = Jadwal::find();
 
-        return $this->render('jadwal',  ['title' => $title]);
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'tanggal' => SORT_DESC,
+                ]
+            ],
+        ]);
+
+        return $this->render('jadwal',  ['title' => $title, 'dataProvider' => $dataProvider]);
     }
 
     public function actionProfilDosen()
@@ -77,8 +79,27 @@ class HomeController extends Controller
     public function actionPenelitianDosen()
     {
         $title = 'Sistem Anjungan - Penelitian Dosen ';
+
+        $query = Penelitian::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10
+            ],
+        ]);
+
+        $query = Penelitian::find()
+                    ->select('nama, count(*) jumlah')
+                    ->groupby('nip');
+                    
+
+        $dataProvider2 = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => false,
+        ]);
         
-        return $this->render('penelitian-dosen', array('title' => $title));
+        return $this->render('penelitian-dosen', array('title' => $title, 'dataProvider' => $dataProvider, 'dataProvider2' => $dataProvider2));
     }
 
     public function actionAutoPlay()

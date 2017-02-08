@@ -8,16 +8,23 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
 <?php
       $Event = new \yii2fullcalendar\models\Event();
       $Event->id = '2';
-      $Event->title = 'fapfap';
-      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime('2 Feb 2017 12:00:00 +0100'));
-      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime('3 Feb 2017 12:00:00 +0100'));
+      $Event->title = 'tugas';
+      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime('10 Feb 2017 12:00:00 +0100'));
+      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime('13 Feb 2017 12:00:00 +0100'));
       $events[] = $Event;
 
       $Event = new \yii2fullcalendar\models\Event();
       $Event->id = '3';
       $Event->title = 'makan';
-      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime('3 Feb 2017 9:00:00 +0100'));
-      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime('4 Feb 2017 16:00:00 +0100'));
+      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime('13 Feb 2017 9:00:00 +0100'));
+      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime('14 Feb 2017 16:00:00 +0100'));
+      $events[] = $Event;
+
+      $Event = new \yii2fullcalendar\models\Event();
+      $Event->id = '4';
+      $Event->title = 'konsul';
+      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime('8 Feb 2017 9:00:00 +0100'));
+      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime('8 Feb 2017 11:00:00 +0100'));
       $events[] = $Event;
 ?>
 

@@ -23,6 +23,17 @@ $this->title = 'Sistem Anjungan - Kehadiran Dosen';
 							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
 						</ul>
 					</div>
+					<div class="presence-box clearfix">
+						<ul dir="rtl">
+							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
+						</ul>
+					</div>
+					
+					<div class="presence-box clearfix">
+						<ul>
+							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
+						</ul>
+					</div>
 					
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6">
@@ -30,6 +41,16 @@ $this->title = 'Sistem Anjungan - Kehadiran Dosen';
 						<?php echo Html::img('@web/images/centang-merah.png', ['alt'=>'TIDAK-ADA', 'class' => 'status_kehadiran', 'style' => 'width:100%;']); ?>	
 					</div>
 
+					<div class="presence-box clearfix">
+						<ul>
+							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
+						</ul>
+					</div>
+					<div class="presence-box clearfix">
+						<ul dir="rtl">
+							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>
+						</ul>
+					</div>
 					<div class="presence-box clearfix">
 						<ul>
 							<li>Afizal Doewes S.Kom, M.SC</br><span>(08.27)</span></li>

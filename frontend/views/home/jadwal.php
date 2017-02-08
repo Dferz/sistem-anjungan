@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 use frontend\assets\AutoTabsAsset;
+use kartik\grid\GridView;
 
 AutoTabsAsset::register($this);
 $this->title = $title;
@@ -18,253 +19,273 @@ $this->title = $title;
             <li><a href="#seminar-ta">Seminar TA</a></li>
         </ul>
         <div id="seminar-kmm" style="overflow: auto;">
-            <h3>Seminar KMM</h3>
-            <div class="table-responsive">
-                <table class="table table-bordered table-condensed table-striped table-hover">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Tanggal</th>
-                        <th>Nama</th>
-                        <th>Nim</th>
-                        <th>Penguji</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Tempat</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr class="success">
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr class="danger">
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      
-                    </tbody>
-                </table>  
-            </div>
+            <?php
+                echo GridView::widget([
+                    'dataProvider' => $dataProvider,
+                    'columns' => [
+                        ['class' => 'kartik\grid\SerialColumn'],
+                        [
+                            'attribute' => 'tanggal',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle'],
+                            'format' => ['date', 'php:d-m-Y']
+
+
+                        ],
+                        [
+                            'header' => '<a href=# >Nama</a>',
+                            'attribute' => 'nama',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle'],
+                            'label' => 'tetel'
+                        ],
+                        [
+                            'attribute' => 'nim',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+                        [
+                            'attribute' => 'penguji',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+                        [
+                            'attribute' => 'jam_mulai',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+                        [
+                            'attribute' => 'jam_selesai',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+                        [
+                            'attribute' => 'tempat',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
+                        ],
+                    ],
+                    'rowOptions'=>function($model){
+                            if($model->tanggal < Yii::$app->formatter->asDate('now', 'php:Y-m-d')){
+                                return ['class' => 'danger'];
+                            } else {
+                                return ['class' => 'success'];
+                            }
+                    },
+                    'pjax' => true,
+                    'bordered' => true,
+                    'striped' => true,
+                    'condensed' => true,
+                    'responsive' => true,
+                    'hover' => true,
+                    'panel' => [
+                        'type' => GridView::TYPE_DEFAULT,
+                        'before' => '<h3> Seminar KMM </h3>'
+                    ],
+                ]);
+            ?>
             
         </div>
         <div id="seminar-proposal">
-           <h3>Seminar Proposal</h3>
-            <div class="table-responsive">
-                <table class="table table-bordered table-condensed table-striped table-hover">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Tanggal</th>
-                        <th>Nama</th>
-                        <th>Nim</th>
-                        <th>Penguji</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Tempat</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr class="success">
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr class="danger">
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      
-                    </tbody>
-                </table>  
-            </div>
+            <?php
+                echo GridView::widget([
+                    'dataProvider' => $dataProvider,
+                    'columns' => [
+                        ['class' => 'kartik\grid\SerialColumn'],
+                        [
+                            'attribute' => 'tanggal',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center'],
+                            'format' => ['date', 'php:d-m-Y']
+
+
+                        ],
+                        [
+                            'header' => '<a href=# >Nama</a>',
+                            'attribute' => 'nama',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center'],
+                            'label' => 'tetel'
+                        ],
+                        [
+                            'attribute' => 'nim',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'penguji',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'jam_mulai',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'jam_selesai',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'tempat',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                    ],
+                    'rowOptions'=>function($model){
+                            if($model->tanggal < Yii::$app->formatter->asDate('now', 'php:Y-m-d')){
+                                return ['class' => 'danger'];
+                            } else {
+                                return ['class' => 'success'];
+                            }
+                    },
+                    'pjax' => true,
+                    'bordered' => true,
+                    'striped' => true,
+                    'condensed' => true,
+                    'responsive' => true,
+                    'hover' => true,
+                    'panel' => [
+                        'type' => GridView::TYPE_DEFAULT,
+                        'before' => '<h3> Seminar Proposal </h3>'
+                    ],
+                ]);
+            ?>
         </div>
         <div id="seminar-hasil">
-            <h3>Seminar Hasil</h3>
-            <div class="table-responsive">
-                <table class="table table-bordered table-condensed table-striped table-hover">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Tanggal</th>
-                        <th>Nama</th>
-                        <th>Nim</th>
-                        <th>Penguji</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Tempat</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr class="success">
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr class="danger">
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      
-                    </tbody>
-                </table>  
-            </div>
+             <?php
+                echo GridView::widget([
+                    'dataProvider' => $dataProvider,
+                    'columns' => [
+                        ['class' => 'kartik\grid\SerialColumn'],
+                        [
+                            'attribute' => 'tanggal',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center'],
+                            'format' => ['date', 'php:d-m-Y']
+
+
+                        ],
+                        [
+                            'header' => '<a href=# >Nama</a>',
+                            'attribute' => 'nama',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center'],
+                            'label' => 'tetel'
+                        ],
+                        [
+                            'attribute' => 'nim',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'penguji',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'jam_mulai',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'jam_selesai',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'tempat',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                    ],
+                    'rowOptions'=>function($model){
+                            if($model->tanggal < Yii::$app->formatter->asDate('now', 'php:Y-m-d')){
+                                return ['class' => 'danger'];
+                            } else {
+                                return ['class' => 'success'];
+                            }
+                    },
+                    'pjax' => true,
+                    'bordered' => true,
+                    'striped' => true,
+                    'condensed' => true,
+                    'responsive' => true,
+                    'hover' => true,
+                    'panel' => [
+                        'type' => GridView::TYPE_DEFAULT,
+                        'before' => '<h3> Seminar Hasil </h3>'
+                    ],
+                ]);
+            ?>
         </div>
         <div id="seminar-ta">
-            <h3>Seminar TA</h3>
-            <div class="table-responsive">
-                <table class="table table-bordered table-condensed table-striped table-hover">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Tanggal</th>
-                        <th>Nama</th>
-                        <th>Nim</th>
-                        <th>Penguji</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
-                        <th>Tempat</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr class="success">
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr class="danger">
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>2016-12-20</td>
-                        <td>DONNY FERNANDO</td>
-                        <td>M0513022</td>
-                        <td>HARYONO SETIADI, ST., M.Eng</td>
-                        <td>09:00</td>
-                        <td>11:00</td>
-                        <td>Ruang Ujian Lt. 4 Gd B FMIPA</td>
-                      </tr>
-                      
-                    </tbody>
-                </table>  
-            </div>
+             <?php
+                echo GridView::widget([
+                    'dataProvider' => $dataProvider,
+                    'columns' => [
+                        ['class' => 'kartik\grid\SerialColumn'],
+                        [
+                            'attribute' => 'tanggal',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center'],
+                            'format' => ['date', 'php:d-m-Y']
+
+
+                        ],
+                        [
+                            'header' => '<a href=# >Nama</a>',
+                            'attribute' => 'nama',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center'],
+                            'label' => 'tetel'
+                        ],
+                        [
+                            'attribute' => 'nim',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'penguji',
+                            'contentOptions' => ['class' => 'text-justify'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'jam_mulai',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'jam_selesai',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                        [
+                            'attribute' => 'tempat',
+                            'contentOptions' => ['class' => 'text-center'],
+                            'headerOptions' => ['class' => 'text-center']
+                        ],
+                    ],
+                    'rowOptions'=>function($model){
+                            if($model->tanggal < Yii::$app->formatter->asDate('now', 'php:Y-m-d')){
+                                return ['class' => 'danger'];
+                            } else {
+                                return ['class' => 'success'];
+                            }
+                    },
+                    'pjax' => true,
+                    'bordered' => true,
+                    'striped' => true,
+                    'condensed' => true,
+                    'responsive' => true,
+                    'hover' => true,
+                    'panel' => [
+                        'type' => GridView::TYPE_DEFAULT,
+                        'before' => '<h3> Seminar TA </h3>'
+                    ],
+                ]);
+            ?>
         </div>
     </div>
 </div>
