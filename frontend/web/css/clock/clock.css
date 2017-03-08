@@ -1,23 +1,27 @@
 .clock {margin:0 auto; color:#fff; }
 
-#Date { font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; font-size:14px; text-align:center; text-shadow:0 0 5px #00c6ff; }
+#Date { font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; font-size:14px; text-align:center; text-shadow:0 0 5px #FF7900; }
 
 .clock ul {margin:0 auto; padding:0px; list-style:none; text-align:center; }
-.clock ul li { display:inline; font-size:3em; text-align:center; font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; text-shadow:0 0 5px #00c6ff; }
+.clock ul li { display:inline; font-size:3em; text-align:center; font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; text-shadow:0 0 5px #FF7900; }
 
 #point { position:relative; -moz-animation:mymove 1s ease infinite; -webkit-animation:mymove 1s ease infinite; padding-left:10px; padding-right:10px; }
 
 @-webkit-keyframes mymove 
 {
-0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+0% {opacity:1.0; text-shadow:0 0 20px #FF7900;}
 50% {opacity:0; text-shadow:none; }
-100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }	
+100% {opacity:1.0; text-shadow:0 0 20px #FF7900; }	
 }
 
 
 @-moz-keyframes mymove 
 {
-0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+0% {opacity:1.0; text-shadow:0 0 20px #FF7900;}
 50% {opacity:0; text-shadow:none; }
-100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }	
+100% {opacity:1.0; text-shadow:0 0 20px #FF7900; }	
 }
+
+
+/*#### before edited ####*/
+/*all text-shadow:0 0 20px #00c6ff*/

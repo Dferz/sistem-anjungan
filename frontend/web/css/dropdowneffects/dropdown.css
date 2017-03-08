@@ -42,6 +42,10 @@
 
 /*#### Edited ####*/
 .cd-active.cd-dropdown ul li span:hover {
-	background: #E6E9ED;
-	color: #80b3ff;
+	background: #fee233;
+	color: #FF7900;
+}
+
+.cd-active.cd-dropdown > span {
+	color: #fee233;
 }

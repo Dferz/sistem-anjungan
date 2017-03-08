@@ -74,4 +74,18 @@ $js = <<< JS
 $( '#cd-dropdown option[data-title-id="kehadiran dosen"]' ).attr('selected','');
 JS;
 $this->registerJS($js);
+
+#### AutoPlay / Auto Changing Page ####
+if(strtolower(Yii::$app->request->get('autoplay')) == 'true'){
+    $js = <<< JS
+    console.log('autoplay: success');
+    $(window).load(function () {
+        window.setTimeout(function () {
+        	
+            window.location.href = "$url";
+        }, $timer)
+    });
+JS;
+    $this->registerJS($js);    
+}
 ?>

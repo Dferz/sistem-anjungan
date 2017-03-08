@@ -134,7 +134,7 @@ $slides = [
         'width'  => 'inherit',
         'height' => 'calc(100vh - 101px)',
         'arrows' => true,
-        'autoplayDelay' => 5000,
+        'autoplayDelay' => 3500,
 
         'init'   => new \yii\web\JsExpression("
             function() {
@@ -151,4 +151,19 @@ $js = <<< JS
 $( '#cd-dropdown option[data-title-id="home"]' ).attr('selected','');
 JS;
 $this->registerJS($js);
+
+#### AutoPlay / Auto Changing Page ####
+if(strtolower(Yii::$app->request->get('autoplay')) == 'true'){
+    $js = <<< JS
+    console.log('autoplay: success');
+    $(window).load(function () {
+        window.setTimeout(function () {
+            $('#out-transition').trigger('click');
+            window.location.href = "$url";
+        }, $timer)
+    });
+JS;
+    $this->registerJS($js);    
+}
+
 ?>

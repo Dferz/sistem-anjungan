@@ -122,3 +122,8 @@ a.desc:after {
 flip-clock-wrapper {
     width:10%;
 }
+
+/*#### EDITED ####*/
+.grid-view td {
+    white-space: normal;
+}

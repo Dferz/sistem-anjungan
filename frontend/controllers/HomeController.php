@@ -9,8 +9,16 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\data\ActiveDataProvider;
 use yii\data\ArrayDataProvider;
+use yii\helpers\Url;
 use frontend\models\Jadwal;
 use frontend\models\Penelitian;
+use frontend\models\ArsipJurnal;
+use frontend\models\ArsipPenelitian;
+use frontend\models\ArsipPengabdian;
+use frontend\models\SeminarKMM;
+use frontend\models\SeminarProposal;
+use frontend\models\SeminarHasil;
+use frontend\models\SidangTA;
 
 
 class HomeController extends Controller
@@ -25,81 +33,218 @@ class HomeController extends Controller
         ];
     }
 
-    public function actionIndex()
+    public function actionIndex($autoplay=null,$timer=20000)
     {
         $title = 'Sistem Anjungan - Home ';
+        if($autoplay=='true') {
+            $url = Url::to(['agenda']).'?autoplay=true&timer='.$timer;
+            return $this->render('index', array('title' => $title, 'url' => $url, 'timer' => $timer));
+        }
+
         return $this->render('index',  array('title' => $title));
     }
 
-    public function actionAgenda()
+    public function actionAgenda($autoplay=null,$timer=20000)
     {
         $title = 'Sistem Anjungan - Agenda ';
+        if($autoplay=='true') {
+            $url = Url::to(['kehadiran-dosen']).'?autoplay=true&timer='.$timer;
+            return $this->render('agenda', array('title' => $title, 'url' => $url, 'timer' => $timer));
+        }
+
         return $this->render('agenda', array('title' => $title));
     }
 
-    public function actionKehadiranDosen()
+    public function actionKehadiranDosen($autoplay=null,$timer=20000)
     {
         $title = 'Sistem Anjungan - Kehadiran Dosen ';
+        if($autoplay=='true') {
+            $url = Url::to(['prestasi-mahasiswa']).'?autoplay=true&timer='.$timer;
+            return $this->render('kehadiran-dosen', array('title' => $title, 'url' => $url, 'timer' => $timer));
+            
+        }
+
         return $this->render('kehadiran-dosen',  array('title' => $title));
     }
 
-    public function actionPrestasiMahasiswa()
+    public function actionPrestasiMahasiswa($autoplay=null,$timer=20000)
     {
         $title = 'Sistem Anjungan - Prestasi Mahasiswa ';
+        if($autoplay=='true') {
+            $url = Url::to(['jadwal']).'?autoplay=true&timer='.$timer;
+            return $this->render('prestasi-mahasiswa', array('title' => $title, 'url' => $url, 'timer' => $timer));
+            
+        }
         return $this->render('prestasi-mahasiswa',  array('title' => $title));
     }
 
-    public function actionJadwal()
+    public function actionJadwal($autoplay=null,$timer=20000)
     {
         $title = 'Sistem Anjungan - Jadwal Seminar ';
 
-        $query = Jadwal::find();
+        // $query = Jadwal::find();
+
+        // $dataProvider = new ActiveDataProvider([
+        //     'query' => $query,
+        //     'pagination' => [
+        //         'pageSize' => 10
+        //     ],
+        //     'sort' => [
+        //         'defaultOrder' => [
+        //             'tanggal' => SORT_DESC,
+        //         ]
+        //     ],
+        // ]);
+
+        $query = SeminarProposal::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
-                'pageSize' => 10
-            ],
-            'sort' => [
-                'defaultOrder' => [
-                    'tanggal' => SORT_DESC,
-                ]
+                'pageSize' => 8
             ],
         ]);
 
-        return $this->render('jadwal',  ['title' => $title, 'dataProvider' => $dataProvider]);
-    }
+        $query = SeminarHasil::find();
 
-    public function actionProfilDosen()
-    {
-        $title = 'Sistem Anjungan - Profil Dosen ';
-        return $this->render('profil-dosen', array('title' => $title));
-    }
-
-    public function actionPenelitianDosen()
-    {
-        $title = 'Sistem Anjungan - Penelitian Dosen ';
-
-        $query = Penelitian::find();
-
-        $dataProvider = new ActiveDataProvider([
+        $dataProvider1 = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
-                'pageSize' => 10
+                'pageSize' => 8
             ],
         ]);
 
-        $query = Penelitian::find()
-                    ->select('nama, count(*) jumlah')
-                    ->groupby('nip');
-                    
+        $query = SidangTA::find();
 
         $dataProvider2 = new ActiveDataProvider([
             'query' => $query,
-            'pagination' => false,
+            'pagination' => [
+                'pageSize' => 8
+            ],
+        ]);
+
+        $query = SeminarKMM::find();
+
+        $dataProvider3 = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10
+            ],
+        ]);
+
+        if($autoplay=='true') {
+            $url = Url::to(['profil-dosen']).'?autoplay=true&timer='.$timer;
+            return $this->render('jadwal',  ['title' => $title,
+                                            'dataProvider' => $dataProvider,
+                                            'dataProvider1' => $dataProvider1,
+                                            'dataProvider2' => $dataProvider2,
+                                            'dataProvider3' => $dataProvider3,
+                                            'url' => $url, 
+                                            'timer' => $timer
+                                        ]);
+            
+        }
+
+        return $this->render('jadwal',  ['title' => $title,
+                                            'dataProvider' => $dataProvider,
+                                            'dataProvider1' => $dataProvider1,
+                                            'dataProvider2' => $dataProvider2,
+                                            'dataProvider3' => $dataProvider3,
+                                        ]);
+    }
+
+    public function actionProfilDosen($autoplay=null,$timer=20000)
+    {
+        $title = 'Sistem Anjungan - Profil Dosen ';
+        if($autoplay=='true') {
+            $url = Url::to(['p2m-dosen']).'?autoplay=true&timer='.$timer;
+            return $this->render('profil-dosen', array('title' => $title, 'url' => $url, 'timer' => $timer));
+            
+        }
+        return $this->render('profil-dosen', array('title' => $title));
+    }
+
+    public function actionP2mDosen($autoplay=null,$timer=20000)
+    {
+        $title = 'Sistem Anjungan - Penelitian, Pengabdian Dosen ';
+
+        $query = ArsipJurnal::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10
+            ],
+        ]);
+
+        $query = ArsipPengabdian::find();
+
+        $dataProvider2 = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10
+            ],
         ]);
         
-        return $this->render('penelitian-dosen', array('title' => $title, 'dataProvider' => $dataProvider, 'dataProvider2' => $dataProvider2));
+        $query = ArsipPenelitian::find();
+
+        $dataProvider3 = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10
+            ],
+        ]);
+
+        $query = ArsipJurnal::find()
+                    ->select('NAMA, count(*) jumlah')
+                    ->groupby('NIP');
+                    
+
+        $dataProvider01 = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => false,
+        ]);
+
+        $query = ArsipPengabdian::find()
+                    ->select('NAMA, count(*) jumlah')
+                    ->groupby('NIP');
+                    
+
+        $dataProvider02 = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => false,
+        ]);
+
+        $query = ArsipPenelitian::find()
+                    ->select('NAMA, count(*) jumlah')
+                    ->groupby('NIP');
+                    
+
+        $dataProvider03 = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => false,
+        ]);
+
+        if($autoplay=='true') {
+            $url = Url::to(['/']).'?autoplay=true&timer='.$timer;
+            return $this->render('p2m-dosen', array('title' => $title, 
+                                                    'dataProvider' => $dataProvider,
+                                                    'dataProvider2' => $dataProvider2,
+                                                    'dataProvider3' => $dataProvider3,
+                                                    'dataProvider01' => $dataProvider01,
+                                                    'dataProvider02' => $dataProvider02,
+                                                    'dataProvider03' => $dataProvider03,
+                                                    'url' => $url, 'timer' => $timer ));
+            
+        }
+
+        return $this->render('p2m-dosen', array('title' => $title, 
+                                                    'dataProvider' => $dataProvider,
+                                                    'dataProvider2' => $dataProvider2,
+                                                    'dataProvider3' => $dataProvider3,
+                                                    'dataProvider01' => $dataProvider01,
+                                                    'dataProvider02' => $dataProvider02,
+                                                    'dataProvider03' => $dataProvider03 ));
     }
 
     public function actionAutoPlay()
@@ -122,5 +267,4 @@ class HomeController extends Controller
         return $this->render('fullpage', ['dataProvider' => $dataProvider]);
     }
 
-   
 }

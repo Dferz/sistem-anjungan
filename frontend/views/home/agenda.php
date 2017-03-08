@@ -35,16 +35,26 @@ $this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
       <?= yii2fullcalendar\yii2fullcalendar::widget([
             'options' => [
                 'lang' => 'id',
+                
 
                     //... more options to be defined here!
+            ],
+            'clientOptions' => [
+              'googleCalendarApiKey' => 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
             ],
             'header'=>[
                         'left'=>'prev,next today',
                         'center'=> 'title',
-                        'right'=> 'month,listWeek,listDay'
+                        'right'=> 'month,listWeek, listMonth'
             ],
+            'googleCalendar' => true,
             'theme' => true,
-            'events'=> $events,
+            'events'=> [
+                        'googleCalendarId' => 'gamedferz7th@gmail.com',
+                        
+            ],
+          
+
           ]);
         
       ?>
@@ -61,4 +71,19 @@ $js = <<< JS
 $( '#cd-dropdown option[data-title-id="agenda"]' ).attr('selected','');
 JS;
 $this->registerJS($js);
+
+#### AutoPlay / Auto Changing Page ####
+if(strtolower(Yii::$app->request->get('autoplay')) == 'true'){
+    $js = <<< JS
+    console.log('autoplay: success');
+    $(window).load(function () {
+        window.setTimeout(function () {
+            $('#out-transition').trigger('click');
+            window.location.href = "$url";
+        }, $timer)
+    });
+JS;
+    $this->registerJS($js);    
+}
+
 ?>
