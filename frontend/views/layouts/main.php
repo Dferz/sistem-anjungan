@@ -44,9 +44,9 @@ SistemAnjunganAsset::register($this);
                             <option value='-1' data-title-id= 'error' data-uclass='animsition-link' data-url='error' selected>Error</option>
                             <option data-title-id= 'home' data-uclass='animsition-link' data-url='<?php echo Yii::$app->homeUrl.'/home'; ?>'>Home</option>
                             <option data-title-id='agenda' data-uclass='animsition-link' data-url='<?php echo Yii::$app->homeUrl.'/home/agenda'; ?>'>Agenda</option>
-                            <option data-title-id='kehadiran dosen' data-uclass='animsition-link' data-url='<?php echo Yii::$app->homeUrl.'/home/kehadiran-dosen'; ?>'>Kehadiran Dosen</option>
                             <option data-title-id = 'prestasi mahasiswa' data-uclass='animsition-link' data-url='<?php echo Yii::$app->homeUrl.'/home/prestasi-mahasiswa'; ?>'>Prestasi</option>
                             <option data-title-id = 'jadwal seminar' data-uclass='animsition-link' data-url='<?php echo Yii::$app->homeUrl.'/home/jadwal'; ?>'>Jadwal Seminar</option>
+                            <option data-title-id = 'maps' data-uclass='animsition-link' data-url='<?php echo Yii::$app->homeUrl.'/home/maps'; ?>'>Maps</option>
                             <option data-title-id = 'profil dosen' data-uclass='animsition-link' data-url='<?php echo Yii::$app->homeUrl.'/home/profil-dosen'; ?>'>Profil Dosen</option>
                             <option data-title-id = 'p2m dosen' data-uclass='animsition-link' data-url='<?php echo Yii::$app->homeUrl.'/home/p2m-dosen'; ?>'>P2M Dosen</option> 
                         </select>

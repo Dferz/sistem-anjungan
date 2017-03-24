@@ -50,10 +50,44 @@ body {
 	background-color: #FF7900;
 }
 
+.mini-box {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.mini-box-text {
+	margin: 5px;
+}
+
+.text-color {
+	color:#FF7900;
+}
+
 .timeline dl dd.pos-right .events, .timeline dl dd.pos-left .events {
 	background-color: #FF7900;
 }
 
+#risetGroup:hover {
+	cursor: pointer;
+}
+
+#rg_cs .list-group-item {
+	background: #e67e22;
+}
+
+#rg_is .list-group-item {
+	background: #9b59b6;
+}
+
+#rg_ids .list-group-item {
+	background: #e74c3c;
+}
+
+.slick-prev:before, .slick-next:before {
+	color: gray;
+}
 
 /*==== EDIT ====*/
 .carousel-control {

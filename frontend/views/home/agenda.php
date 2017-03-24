@@ -1,66 +1,87 @@
 <?php
 
-/* @var $this yii\web\View */
 use yii\helpers\Html;
-$this->title = 'Sistem Anjungan - Prestasi Mahasiswa';
-?>
+use frontend\assets\FullCalendarAsset;
+use frontend\assets\SlickAsset;
 
-<?php
-      $Event = new \yii2fullcalendar\models\Event();
-      $Event->id = '2';
-      $Event->title = 'tugas';
-      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime('10 Feb 2017 12:00:00 +0100'));
-      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime('13 Feb 2017 12:00:00 +0100'));
-      $events[] = $Event;
-
-      $Event = new \yii2fullcalendar\models\Event();
-      $Event->id = '3';
-      $Event->title = 'makan';
-      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime('13 Feb 2017 9:00:00 +0100'));
-      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime('14 Feb 2017 16:00:00 +0100'));
-      $events[] = $Event;
-
-      $Event = new \yii2fullcalendar\models\Event();
-      $Event->id = '4';
-      $Event->title = 'konsul';
-      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime('8 Feb 2017 9:00:00 +0100'));
-      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime('8 Feb 2017 11:00:00 +0100'));
-      $events[] = $Event;
+SlickAsset::register($this);
+FullCalendarAsset::register($this);
+$this->title = $title;
 ?>
 
 <div class="wrap-content">
   <div class="row">
     <div class="col-md-9">
-      <!-- #### Calendar #### -->
-      <?= yii2fullcalendar\yii2fullcalendar::widget([
-            'options' => [
-                'lang' => 'id',
-                
-
-                    //... more options to be defined here!
-            ],
-            'clientOptions' => [
-              'googleCalendarApiKey' => 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
-            ],
-            'header'=>[
-                        'left'=>'prev,next today',
-                        'center'=> 'title',
-                        'right'=> 'month,listWeek, listMonth'
-            ],
-            'googleCalendar' => true,
-            'theme' => true,
-            'events'=> [
-                        'googleCalendarId' => 'gamedferz7th@gmail.com',
-                        
-            ],
-          
-
-          ]);
-        
-      ?>
+      <div id="agenda"></div>
     </div>
     <div class="col-md-3">
-      
+      <div id="ketAgenda">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h3 class="text-center">Keterangan :</h3>
+          </li>
+          <li class="list-group-item">
+            <div class="pull-left" style="margin-right: 5px;">
+              <div class="mini-box" style="background: blue"></div>
+            </div>
+            <p class="mini-box-text">Drs. Bambang H, M.App.Sc, PhD</p>
+          </li>
+          <li class="list-group-item">
+            <div class="pull-left" style="margin-right: 5px;">
+              <div class="mini-box" style="background: red"></div>
+            </div>
+            <p class="mini-box-text">Afrizal Doewes, M.Sc</p>
+          </li>
+          <li class="list-group-item">
+            <div class="pull-left" style="margin-right: 5px;">
+              <div class="mini-box" style="background: purple"></div>
+            </div>
+            <p class="mini-box-text">Haryono Setiadi, ST, M.Eng</p>
+          </li>
+          <li class="list-group-item">
+            <div class="pull-left" style="margin-right: 5px;">
+              <div class="mini-box" style="background: blue"></div>
+            </div>
+            <p class="mini-box-text">Drs. Bambang H, M.App.Sc, PhD</p>
+          </li>
+          <li class="list-group-item">
+            <div class="pull-left" style="margin-right: 5px;">
+              <div class="mini-box" style="background: red"></div>
+            </div>
+            <p class="mini-box-text">Afrizal Doewes, M.Sc</p>
+          </li>
+          <li class="list-group-item" style="margin-right: 5px;">
+            <div class="pull-left">
+              <div class="mini-box" style="background: purple"></div>
+            </div>
+            <p class="mini-box-text">Haryono Setiadi, ST, M.Eng</p>
+          </li>
+        </ul>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h3 class="text-center">Keterangan :</h3>
+          </li>
+          <li class="list-group-item">
+            <div class="pull-left" style="margin-right: 5px;">
+              <div class="mini-box" style="background: green"></div>
+            </div>
+            <p class="mini-box-text">Drs. YS. Palgunadi, M.Sc</p>
+          </li>
+          <li class="list-group-item">
+            <div class="pull-left" style="margin-right: 5px;">
+              <div class="mini-box" style="background: pink"></div>
+            </div>
+            <p class="mini-box-text">Dr. Wiranto, M.Kom, MCs</p>
+          </li>
+          <li class="list-group-item">
+            <div class="pull-left" style="margin-right: 5px;">
+              <div class="mini-box" style="background: yellow"></div>
+            </div>
+            <p class="mini-box-text">Ristu Saptono, SSi, MT</p>
+          </li>
+        </ul>
+      </div>
+          
     </div>
   </div>
 </div>
@@ -82,8 +103,53 @@ if(strtolower(Yii::$app->request->get('autoplay')) == 'true'){
             window.location.href = "$url";
         }, $timer)
     });
+
+    // AutoPlay Calendar depend on button
+    var arrayButton = ["button.fc-month-button", "button.fc-listWeek-button", "button.fc-agendaWeek-button"]
+    var arrayCounter = 1;
+    var timeOut = 8000;
+    setInterval(function (){
+      $(arrayButton[arrayCounter]).trigger('click');
+      arrayCounter = arrayCounter == 2 ? 0 : (arrayCounter + 1);
+    },timeOut);
 JS;
     $this->registerJS($js);    
 }
+
+$js = <<< JS
+$('#agenda').fullCalendar({
+    theme: true,
+    header: {
+        left:   'prev,next today',
+        center: 'title',
+        right:  'month,listWeek,agendaWeek',
+    },
+    locale: 'id',
+    navLinks: true,
+    googleCalendarApiKey: 'AIzaSyCWPNuus3yDQfyY4ofPXC6vzPLzHtvNRU0',
+    eventSources: [
+      {
+          googleCalendarId: 'gamedferz7th@gmail.com',
+          color: 'red',
+      },
+      {
+          googleCalendarId: 'senamkebugarandata@gmail.com',
+          
+      }
+  ]
+});
+
+JS;
+$this->registerJS($js);
+
+#### Slide Agenda Sidebar ####
+$js = <<< JS
+$('#ketAgenda').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+});
+JS;
+$this->registerJS($js);
 
 ?>

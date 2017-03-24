@@ -24,7 +24,6 @@ $this->title = $title;
             <li><a href="#arsip-penelitian">Arsip Penelitian</a></li>
         </ul>
         <div id="grafik-jurnal">
-            <h3>Grafik</h3>
             <div class="row">
                 <div class="col-md-7">
                     <?php
@@ -199,7 +198,6 @@ $this->title = $title;
             ?>
         </div>
         <div id="grafik-pengabdian">
-            <h3>Grafik</h3>
             <div class="row">
                 <div class="col-md-7">
                     <?php
@@ -358,7 +356,6 @@ $this->title = $title;
             ?>
         </div>
         <div id="grafik-penelitian">
-            <h3>Grafik</h3>
             <div class="row">
                 <div class="col-md-7">
                     <?php

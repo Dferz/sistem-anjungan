@@ -36,8 +36,7 @@ $this->title = $title;
                             'header' => '<a href=# >Nama</a>',
                             'attribute' => 'NAMA',
                             'contentOptions' => ['class' => 'text-justify'],
-                            'headerOptions' => ['class' => 'text-center kv-align-middle'],
-                            'label' => 'tetel'
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
                         ],
                         [
                             'attribute' => 'NIM',
@@ -119,8 +118,7 @@ $this->title = $title;
                             'header' => '<a href=# >Nama</a>',
                             'attribute' => 'NAMA',
                             'contentOptions' => ['class' => 'text-justify'],
-                            'headerOptions' => ['class' => 'text-center kv-align-middle'],
-                            'label' => 'tetel'
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
                         ],
                         [
                             'attribute' => 'NIM',
@@ -202,8 +200,7 @@ $this->title = $title;
                             'header' => '<a href=# >Nama</a>',
                             'attribute' => 'NAMA',
                             'contentOptions' => ['class' => 'text-justify'],
-                            'headerOptions' => ['class' => 'text-center kv-align-middle'],
-                            'label' => 'tetel'
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
                         ],
                         [
                             'attribute' => 'NIM',
@@ -285,8 +282,7 @@ $this->title = $title;
                             'header' => '<a href=# >Nama</a>',
                             'attribute' => 'NAMA',
                             'contentOptions' => ['class' => 'text-justify'],
-                            'headerOptions' => ['class' => 'text-center kv-align-middle'],
-                            'label' => 'tetel'
+                            'headerOptions' => ['class' => 'text-center kv-align-middle']
                         ],
                         [
                             'attribute' => 'NIM',

@@ -8,7 +8,6 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\data\ActiveDataProvider;
-use yii\data\ArrayDataProvider;
 use yii\helpers\Url;
 use frontend\models\Jadwal;
 use frontend\models\Penelitian;
@@ -48,24 +47,24 @@ class HomeController extends Controller
     {
         $title = 'Sistem Anjungan - Agenda ';
         if($autoplay=='true') {
-            $url = Url::to(['kehadiran-dosen']).'?autoplay=true&timer='.$timer;
+            $url = Url::to(['prestasi-mahasiswa']).'?autoplay=true&timer='.$timer;
             return $this->render('agenda', array('title' => $title, 'url' => $url, 'timer' => $timer));
         }
 
         return $this->render('agenda', array('title' => $title));
     }
 
-    public function actionKehadiranDosen($autoplay=null,$timer=20000)
-    {
-        $title = 'Sistem Anjungan - Kehadiran Dosen ';
-        if($autoplay=='true') {
-            $url = Url::to(['prestasi-mahasiswa']).'?autoplay=true&timer='.$timer;
-            return $this->render('kehadiran-dosen', array('title' => $title, 'url' => $url, 'timer' => $timer));
+    // public function actionKehadiranDosen($autoplay=null,$timer=20000)
+    // {
+    //     $title = 'Sistem Anjungan - Kehadiran Dosen ';
+    //     if($autoplay=='true') {
+    //         $url = Url::to(['prestasi-mahasiswa']).'?autoplay=true&timer='.$timer;
+    //         return $this->render('kehadiran-dosen', array('title' => $title, 'url' => $url, 'timer' => $timer));
             
-        }
+    //     }
 
-        return $this->render('kehadiran-dosen',  array('title' => $title));
-    }
+    //     return $this->render('kehadiran-dosen',  array('title' => $title));
+    // }
 
     public function actionPrestasiMahasiswa($autoplay=null,$timer=20000)
     {
@@ -81,20 +80,6 @@ class HomeController extends Controller
     public function actionJadwal($autoplay=null,$timer=20000)
     {
         $title = 'Sistem Anjungan - Jadwal Seminar ';
-
-        // $query = Jadwal::find();
-
-        // $dataProvider = new ActiveDataProvider([
-        //     'query' => $query,
-        //     'pagination' => [
-        //         'pageSize' => 10
-        //     ],
-        //     'sort' => [
-        //         'defaultOrder' => [
-        //             'tanggal' => SORT_DESC,
-        //         ]
-        //     ],
-        // ]);
 
         $query = SeminarProposal::find();
 
@@ -133,7 +118,7 @@ class HomeController extends Controller
         ]);
 
         if($autoplay=='true') {
-            $url = Url::to(['profil-dosen']).'?autoplay=true&timer='.$timer;
+            $url = Url::to(['maps']).'?autoplay=true&timer='.$timer;
             return $this->render('jadwal',  ['title' => $title,
                                             'dataProvider' => $dataProvider,
                                             'dataProvider1' => $dataProvider1,
@@ -151,6 +136,17 @@ class HomeController extends Controller
                                             'dataProvider2' => $dataProvider2,
                                             'dataProvider3' => $dataProvider3,
                                         ]);
+    }
+
+    public function actionMaps($autoplay=null,$timer=20000)
+    {
+        $title = 'Sistem Anjungan - Maps ';
+        if($autoplay=='true') {
+            $url = Url::to(['profil-dosen']).'?autoplay=true&timer='.$timer;
+            return $this->render('maps', array('title' => $title, 'url' => $url, 'timer' => $timer));
+            
+        }
+        return $this->render('maps', array('title' => $title));
     }
 
     public function actionProfilDosen($autoplay=null,$timer=20000)
